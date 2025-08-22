@@ -1,0 +1,29 @@
+[gd_scene load_steps=7 format=3 uid="uid://dq6fndlv5e6xu"]
+
+[ext_resource type="PackedScene" uid="uid://eg7ou0hair3i" path="res://Levels/Scenes/Sky.tscn" id="1_02pw6"]
+[ext_resource type="PackedScene" uid="uid://c30mpb71f46pg" path="res://UI/UI.tscn" id="2_8otku"]
+[ext_resource type="Texture2D" uid="uid://fk1o1xbjmj0p" path="res://Assets/Sprites/foreground_01.png" id="3_ti473"]
+[ext_resource type="Texture2D" uid="uid://8yjk6c5yh487" path="res://Assets/Sprites/island.png" id="4_si2lg"]
+[ext_resource type="Texture2D" uid="uid://bhseiff8a8byj" path="res://Assets/Sprites/ship.png" id="5_lkmi6"]
+[ext_resource type="Script" uid="uid://b3fs1nuwn10np" path="res://Scripts/canvas_modulate.gd" id="6_si2lg"]
+
+[node name="Level01Test" type="Node2D"]
+
+[node name="Sky" parent="." instance=ExtResource("1_02pw6")]
+
+[node name="Ui" parent="." instance=ExtResource("2_8otku")]
+
+[node name="Foreground01" type="Sprite2D" parent="."]
+position = Vector2(2683, 1091)
+texture = ExtResource("3_ti473")
+
+[node name="Island" type="Sprite2D" parent="."]
+position = Vector2(1981, 1062)
+texture = ExtResource("4_si2lg")
+
+[node name="Ship" type="Sprite2D" parent="."]
+position = Vector2(903, 1077)
+texture = ExtResource("5_lkmi6")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+script = ExtResource("6_si2lg")

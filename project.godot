@@ -11,5 +11,23 @@ config_version=5
 [application]
 
 config/name="Project_Sky_Haven"
+run/main_scene="res://Levels/Level_01_TEST/Level_01_TEST.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://Scripts/Global.gd"
+Clock="*res://UI/Clock.gd"
+SkyTint="*res://Scripts/SkyTint.gd"
+
+[display]
+
+window/size/viewport_width=3840
+window/size/viewport_height=2160
+window/size/mode=4
+window/stretch/mode="canvas_items"
+
+[rendering]
+
+textures/lossless_compression/force_png=true

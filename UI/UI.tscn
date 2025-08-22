@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c30mpb71f46pg"]
+
+[ext_resource type="FontFile" uid="uid://x6thkh2jxesg" path="res://Assets/Fonts/MouseMemoirs-Regular.ttf" id="1_6dd3c"]
+[ext_resource type="Script" uid="uid://cmx6tbt60pbjm" path="res://UI/ui.gd" id="1_dhe1o"]
+
+[node name="Ui" type="Control" node_paths=PackedStringArray("time_label")]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dhe1o")
+time_label = NodePath("CanvasLayer/TimeLabel")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TimeLabel" type="Label" parent="CanvasLayer"]
+offset_left = 43.0
+offset_top = 34.0
+offset_right = 185.0
+offset_bottom = 149.0
+theme_override_fonts/font = ExtResource("1_6dd3c")
+theme_override_font_sizes/font_size = 100
+text = "12:32"

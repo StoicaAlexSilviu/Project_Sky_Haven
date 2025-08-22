@@ -1,0 +1,57 @@
+[gd_scene load_steps=12 format=3 uid="uid://eg7ou0hair3i"]
+
+[ext_resource type="Script" uid="uid://cw60x5f3tux3d" path="res://Scripts/Sky.gd" id="1_1wvwq"]
+[ext_resource type="Texture2D" uid="uid://drhp4v28i6xs5" path="res://Assets/Sprites/sky.png" id="1_au6na"]
+[ext_resource type="Material" uid="uid://cg0dgc10wwcl1" path="res://Assets/Gradients/Stars_canvas_item_material.tres" id="2_u8atm"]
+[ext_resource type="Texture2D" uid="uid://cv0ke7ugg6egb" path="res://Assets/Sprites/stars.png" id="3_f7iei"]
+[ext_resource type="Script" uid="uid://bycicto2i8dr1" path="res://Scripts/stars.gd" id="4_4ekqn"]
+[ext_resource type="Texture2D" uid="uid://2ftmwh7foecu" path="res://Assets/Sprites/sun.png" id="4_x5hom"]
+[ext_resource type="Texture2D" uid="uid://d1trs70e85s88" path="res://Assets/Sprites/moon.png" id="5_mxrnb"]
+[ext_resource type="Script" uid="uid://bib4m1hlw60or" path="res://Scripts/sun_and_moon_pivot.gd" id="6_1o5p6"]
+[ext_resource type="Script" uid="uid://1qjfw15jiuku" path="res://Scripts/tint.gd" id="6_4r0vy"]
+[ext_resource type="Gradient" uid="uid://ct8wl7vvkeu8n" path="res://Assets/Gradients/Sky_gradient.tres" id="7_wuroc"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wuroc"]
+gradient = ExtResource("7_wuroc")
+use_hdr = true
+
+[node name="Sky" type="Node2D"]
+script = ExtResource("1_1wvwq")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Sky" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource("1_au6na")
+centered = false
+
+[node name="Stars" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+material = ExtResource("2_u8atm")
+scale = Vector2(1.01641, 1.04348)
+texture = ExtResource("3_f7iei")
+centered = false
+script = ExtResource("4_4ekqn")
+fade_start = 17
+fade_end = 7
+max_alpha = 1.0
+
+[node name="Sun_and_moon" type="Node2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(1920, 1080)
+script = ExtResource("6_1o5p6")
+deg_offset = 180.0
+
+[node name="Sun" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer/Sun_and_moon"]
+material = ExtResource("2_u8atm")
+position = Vector2(0, -771)
+texture = ExtResource("4_x5hom")
+
+[node name="Moon" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer/Sun_and_moon"]
+material = ExtResource("2_u8atm")
+position = Vector2(0, 805)
+texture = ExtResource("5_mxrnb")
+
+[node name="Tint" type="CanvasModulate" parent="ParallaxBackground"]
+script = ExtResource("6_4r0vy")
+day_night_gradient = SubResource("GradientTexture1D_wuroc")
