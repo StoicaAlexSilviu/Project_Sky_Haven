@@ -10,6 +10,7 @@ script = ExtResource("1_dhe1o")
 time_label = NodePath("CanvasLayer/TimeLabel")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 126
 
 [node name="TimeLabel" type="Label" parent="CanvasLayer"]
 offset_left = 43.0
