@@ -62,7 +62,8 @@ max_alpha = 1.0
 [node name="Sun_and_moon" type="Node2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(1920, 1080)
 script = ExtResource("6_1o5p6")
-start_hour = 15
+day_length_minutes = 30.0
+start_hour = 23
 deg_offset = 180.0
 radius_x = 800.0
 radius_y = 1500.0

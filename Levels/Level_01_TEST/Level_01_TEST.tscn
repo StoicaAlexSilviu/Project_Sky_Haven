@@ -32,11 +32,13 @@ position = Vector2(1919, 1920)
 texture = ExtResource("10_y3gq7")
 
 [node name="Island" type="Sprite2D" parent="."]
-position = Vector2(2069.5, 1062)
+modulate = Color(0.321279, 0.438717, 0.526731, 1)
+position = Vector2(1723, 960)
+scale = Vector2(0.479167, 0.479167)
 texture = ExtResource("4_si2lg")
 
 [node name="Ship" type="Sprite2D" parent="."]
-position = Vector2(991.5, 1077)
+position = Vector2(772, 1018)
 texture = ExtResource("5_lkmi6")
 
 [node name="Foreground01" type="Sprite2D" parent="."]

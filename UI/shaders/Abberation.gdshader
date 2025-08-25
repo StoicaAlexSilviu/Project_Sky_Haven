@@ -14,7 +14,7 @@ uniform bool  early_out = true;
 
 // -------- Static Colored Grain Controls --------
 uniform float grain_amount   : hint_range(0.0, 1.0) = 0.08; // 0 disables
-uniform float grain_size_px  : hint_range(1.0, 12.0) = 2.0; // 1 = per-pixel
+uniform float grain_size_px  : hint_range(0.1, 12.0) = 2.0; // 1 = per-pixel
 uniform float grain_contrast : hint_range(0.5, 2.0) = 1.0;  // shaping
 uniform float grain_seed     : hint_range(0.0, 1000.0) = 0.0;
 uniform bool  grain_colored = true;
