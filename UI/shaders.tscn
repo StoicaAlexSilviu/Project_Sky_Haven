@@ -23,14 +23,14 @@ shader_parameter/intensity = 1.0
 shader = ExtResource("1_qr508")
 shader_parameter/center = Vector2(0.5, 0.5)
 shader_parameter/inner = 0.0
-shader_parameter/radius = 0.95
-shader_parameter/strength_px = 10.0
-shader_parameter/green_shift = 0.365
+shader_parameter/radius = 0.381
+shader_parameter/strength_px = 0.746
+shader_parameter/green_shift = 0.0
 shader_parameter/early_out = true
 shader_parameter/grain_amount = 0.04
 shader_parameter/grain_size_px = 0.5
 shader_parameter/grain_contrast = 0.5
-shader_parameter/grain_seed = 0.0
+shader_parameter/grain_seed = 303.867
 shader_parameter/grain_colored = true
 
 [node name="Shaders" type="Control"]
