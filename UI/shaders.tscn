@@ -14,10 +14,10 @@ shader_parameter/tint = Color(1, 0.831, 0.61, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j6ura"]
 shader = ExtResource("2_b8tu1")
-shader_parameter/blur_radius_px = 4.0
-shader_parameter/edge_width = 0.15
-shader_parameter/edge_softness = 0.285
-shader_parameter/intensity = 1.0
+shader_parameter/blur_radius_px = 3.435
+shader_parameter/edge_width = 0.095
+shader_parameter/edge_softness = 0.275
+shader_parameter/intensity = 0.63
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b8tu1"]
 shader = ExtResource("1_qr508")

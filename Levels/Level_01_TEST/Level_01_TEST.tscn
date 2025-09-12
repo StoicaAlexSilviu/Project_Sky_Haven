@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dq6fndlv5e6xu"]
+[gd_scene load_steps=15 format=3 uid="uid://dq6fndlv5e6xu"]
 
 [ext_resource type="PackedScene" uid="uid://eg7ou0hair3i" path="res://Levels/Scenes/Sky.tscn" id="1_02pw6"]
 [ext_resource type="PackedScene" uid="uid://c30mpb71f46pg" path="res://UI/UI.tscn" id="2_8otku"]
@@ -6,45 +6,96 @@
 [ext_resource type="Texture2D" uid="uid://div7gd1snikww" path="res://Assets/Sprites/cloud_02.png" id="3_dxt10"]
 [ext_resource type="Texture2D" uid="uid://fk1o1xbjmj0p" path="res://Assets/Sprites/foreground_01.png" id="3_ti473"]
 [ext_resource type="Texture2D" uid="uid://bevoqwcjjt8uf" path="res://Assets/Sprites/cloud_03.png" id="4_3fs3n"]
-[ext_resource type="Texture2D" uid="uid://8yjk6c5yh487" path="res://Assets/Sprites/island.png" id="4_si2lg"]
-[ext_resource type="Texture2D" uid="uid://bhseiff8a8byj" path="res://Assets/Sprites/ship.png" id="5_lkmi6"]
+[ext_resource type="PackedScene" uid="uid://k5sstgapy6nk" path="res://Levels/Scenes/water.tscn" id="6_dxt10"]
 [ext_resource type="Script" uid="uid://b3fs1nuwn10np" path="res://Scripts/canvas_modulate.gd" id="6_si2lg"]
+[ext_resource type="Script" uid="uid://1qjfw15jiuku" path="res://Scripts/tint.gd" id="6_y3gq7"]
+[ext_resource type="Gradient" uid="uid://ct8wl7vvkeu8n" path="res://Assets/Gradients/Sky_gradient.tres" id="7_5c0dn"]
+[ext_resource type="PackedScene" uid="uid://c62s7v5e184oj" path="res://Levels/Scenes/ship.tscn" id="7_kaivw"]
 [ext_resource type="Texture2D" uid="uid://ddr1a6ksadj8s" path="res://Assets/Sprites/base_clouds.png" id="10_y3gq7"]
+[ext_resource type="Script" uid="uid://db5qu73i0gbnu" path="res://Scripts/camera.gd" id="11_dxt10"]
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wl67n"]
+gradient = ExtResource("7_5c0dn")
+use_hdr = true
 
 [node name="Level01Test" type="Node2D"]
 
 [node name="Sky" parent="." instance=ExtResource("1_02pw6")]
+z_index = -100
 
-[node name="Cloud01" type="Sprite2D" parent="."]
-position = Vector2(619, 636)
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0, 0)
+
+[node name="Cloud01" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+light_mask = 2
+visibility_layer = 2
+z_index = -50
+position = Vector2(1533, 451)
 texture = ExtResource("2_kaivw")
 
-[node name="Cloud02" type="Sprite2D" parent="."]
-position = Vector2(1152, 1615)
+[node name="Cloud02" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+light_mask = 2
+visibility_layer = 2
+z_index = -50
+position = Vector2(1149, 1068)
 texture = ExtResource("3_dxt10")
 
-[node name="Cloud03" type="Sprite2D" parent="."]
-position = Vector2(2303, 1753)
+[node name="Cloud03" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+light_mask = 2
+visibility_layer = 2
+z_index = -50
+position = Vector2(2306, 1280)
 texture = ExtResource("4_3fs3n")
 
-[node name="BaseClouds" type="Sprite2D" parent="."]
-position = Vector2(1919, 1920)
+[node name="BaseClouds" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+light_mask = 2
+visibility_layer = 2
+z_index = -50
+position = Vector2(1919, 1740)
 texture = ExtResource("10_y3gq7")
+offset = Vector2(0, -238.37)
 
-[node name="Island" type="Sprite2D" parent="."]
-position = Vector2(1942, 1112)
-scale = Vector2(0.398843, 0.398843)
-texture = ExtResource("4_si2lg")
+[node name="Tint" type="CanvasModulate" parent="ParallaxBackground"]
+script = ExtResource("6_y3gq7")
+day_night_gradient = SubResource("GradientTexture1D_wl67n")
 
-[node name="Ship" type="Sprite2D" parent="."]
-position = Vector2(772, 1018)
-texture = ExtResource("5_lkmi6")
+[node name="Water" parent="." instance=ExtResource("6_dxt10")]
 
-[node name="Foreground01" type="Sprite2D" parent="."]
-position = Vector2(2680, 1080)
-texture = ExtResource("3_ti473")
+[node name="Ship" parent="." instance=ExtResource("7_kaivw")]
+position = Vector2(1920, 1875)
+
+[node name="Camera2D" type="Camera2D" parent="Ship" node_paths=PackedStringArray("target", "sprite_for_facing")]
+limit_bottom = 2160
+drag_vertical_enabled = true
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource("11_dxt10")
+target = NodePath("..")
+lead_pixels = 500.0
+sprite_for_facing = NodePath("..")
+lead_smooth = 0.5
+idle_lead_delay = 2.0
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 script = ExtResource("6_si2lg")
 
 [node name="Ui" parent="." instance=ExtResource("2_8otku")]
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+layer = 100
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(1.5, 1.5)
+
+[node name="Foreground01" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer"]
+visible = false
+z_index = 51
+position = Vector2(2680, 1080)
+texture = ExtResource("3_ti473")
+
+[node name="Tint" type="CanvasModulate" parent="ParallaxBackground2"]
+script = ExtResource("6_y3gq7")
+day_night_gradient = SubResource("GradientTexture1D_wl67n")

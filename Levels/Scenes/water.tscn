@@ -1,0 +1,244 @@
+[gd_scene load_steps=12 format=3 uid="uid://k5sstgapy6nk"]
+
+[ext_resource type="Texture2D" uid="uid://nvbg4d5lkia4" path="res://Assets/Sprites/water_layer01.png" id="1_jxypx"]
+[ext_resource type="Shader" uid="uid://cv7x7o4ijipvq" path="res://UI/shaders/water.gdshader" id="1_ynhty"]
+[ext_resource type="Script" uid="uid://dt38okh2gry1t" path="res://Scripts/parallax.gd" id="3_5gh26"]
+[ext_resource type="Script" uid="uid://1qjfw15jiuku" path="res://Scripts/tint.gd" id="4_nydue"]
+[ext_resource type="Gradient" uid="uid://ct8wl7vvkeu8n" path="res://Assets/Gradients/Sky_gradient.tres" id="5_5k7mi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5gh26"]
+shader = ExtResource("1_ynhty")
+shader_parameter/overlay_color = Color(0.429, 0.502667, 0.65, 0.694118)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_65rvu"]
+shader = ExtResource("1_ynhty")
+shader_parameter/overlay_color = Color(0.429, 0.502667, 0.65, 0.607843)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nydue"]
+shader = ExtResource("1_ynhty")
+shader_parameter/overlay_color = Color(0.429, 0.502667, 0.65, 0.403922)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_5k7mi"]
+shader = ExtResource("1_ynhty")
+shader_parameter/overlay_color = Color(0.429, 0.502667, 0.65, 0.301961)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_oir0a"]
+shader = ExtResource("1_ynhty")
+shader_parameter/overlay_color = Color(0.429, 0.502667, 0.65, 0.145098)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_oir0a"]
+gradient = ExtResource("5_5k7mi")
+use_hdr = true
+
+[node name="Water" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -1
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 1)
+motion_mirroring = Vector2(384.09, 0)
+
+[node name="WaterLayer02" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+z_index = 46
+texture_repeat = 2
+material = SubResource("ShaderMaterial_5gh26")
+position = Vector2(-317, 1718)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_jxypx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 100000, 580.145)
+region_filter_clip_enabled = true
+script = ExtResource("3_5gh26")
+amplitude_x_range = Vector2(5, 10)
+speed_x_range = Vector2(0.1, 0.1)
+amplitude_y_range = Vector2(2, 3)
+speed_y_range = Vector2(0.2, 0.3)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+motion_mirroring = Vector2(767.86, 0)
+
+[node name="WaterLayer06" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+z_index = 46
+texture_repeat = 2
+material = SubResource("ShaderMaterial_65rvu")
+position = Vector2(-374, 1735)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_jxypx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 150000, 580.145)
+region_filter_clip_enabled = true
+script = ExtResource("3_5gh26")
+amplitude_x_range = Vector2(10, 15)
+speed_x_range = Vector2(0.2, 0.2)
+amplitude_y_range = Vector2(3, 5)
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 1)
+motion_mirroring = Vector2(1152.35, 0)
+
+[node name="WaterLayer07" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+z_index = 46
+texture_repeat = 2
+material = SubResource("ShaderMaterial_nydue")
+position = Vector2(-565, 1755)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_jxypx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 29000, 580.145)
+region_filter_clip_enabled = true
+script = ExtResource("3_5gh26")
+amplitude_x_range = Vector2(15, 25)
+speed_x_range = Vector2(0.3, 0.3)
+amplitude_y_range = Vector2(4, 6)
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.4, 1)
+motion_mirroring = Vector2(1535.88, 0)
+
+[node name="WaterLayer08" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+z_index = 46
+texture_repeat = 2
+material = SubResource("ShaderMaterial_5k7mi")
+position = Vector2(-622, 1775)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_jxypx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 25000, 580.145)
+region_filter_clip_enabled = true
+script = ExtResource("3_5gh26")
+amplitude_x_range = Vector2(25, 40)
+speed_x_range = Vector2(0.4, 0.4)
+amplitude_y_range = Vector2(5, 7)
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.5, 1)
+motion_mirroring = Vector2(1919.97, 0)
+
+[node name="WaterLayer09" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+z_index = 46
+texture_repeat = 2
+material = SubResource("ShaderMaterial_oir0a")
+position = Vector2(-1621, 1795)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_jxypx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 25000, 580.145)
+region_filter_clip_enabled = true
+script = ExtResource("3_5gh26")
+amplitude_x_range = Vector2(40, 65)
+speed_x_range = Vector2(0.5, 0.5)
+amplitude_y_range = Vector2(6, 8)
+
+[node name="Tint" type="CanvasModulate" parent="ParallaxBackground"]
+z_index = 4096
+script = ExtResource("4_nydue")
+day_night_gradient = SubResource("GradientTexture1D_oir0a")
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+layer = 2
+
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0.6, 1)
+motion_mirroring = Vector2(2304.35, 0)
+
+[node name="WaterLayer10" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer6"]
+z_index = 46
+texture_repeat = 2
+position = Vector2(-667, 1829)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_jxypx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 20000, 580.145)
+region_filter_clip_enabled = true
+script = ExtResource("3_5gh26")
+amplitude_x_range = Vector2(65, 95)
+speed_x_range = Vector2(0.6, 0.6)
+amplitude_y_range = Vector2(7, 9)
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(2688.2, 0)
+
+[node name="WaterLayer01" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer7"]
+z_index = 47
+texture_repeat = 2
+position = Vector2(-2751, 1849)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_jxypx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 15000, 580.145)
+region_filter_clip_enabled = true
+script = ExtResource("3_5gh26")
+amplitude_x_range = Vector2(95, 125)
+speed_x_range = Vector2(0.7, 0.7)
+amplitude_y_range = Vector2(8, 10)
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0.8, 1)
+motion_mirroring = Vector2(3072, 0)
+
+[node name="WaterLayer03" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer8"]
+z_index = 48
+texture_repeat = 2
+position = Vector2(-1410, 1879)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("1_jxypx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 580.145)
+region_filter_clip_enabled = true
+script = ExtResource("3_5gh26")
+amplitude_x_range = Vector2(125, 140)
+speed_x_range = Vector2(0.8, 0.8)
+amplitude_y_range = Vector2(9, 2)
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(0.9, 1)
+motion_mirroring = Vector2(3455.73, 0)
+
+[node name="WaterLayer04" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer9"]
+z_index = 49
+texture_repeat = 2
+position = Vector2(0, 1926)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("1_jxypx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 580.145)
+region_filter_clip_enabled = true
+script = ExtResource("3_5gh26")
+amplitude_x_range = Vector2(140, 165)
+speed_x_range = Vector2(0.9, 0.9)
+amplitude_y_range = Vector2(10, 30)
+
+[node name="ParallaxLayer10" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_mirroring = Vector2(3840, 0)
+
+[node name="WaterLayer05" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer10"]
+modulate = Color(0.603923, 0.603923, 0.603923, 1)
+z_index = 51
+texture_repeat = 2
+position = Vector2(-790, 1994)
+texture = ExtResource("1_jxypx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 580.145)
+region_filter_clip_enabled = true
+script = ExtResource("3_5gh26")
+amplitude_x_range = Vector2(165, 200)
+speed_x_range = Vector2(1, 1)
+amplitude_y_range = Vector2(12, 14)
+
+[node name="Tint" type="CanvasModulate" parent="ParallaxBackground2"]
+z_index = 4096
+script = ExtResource("4_nydue")
+day_night_gradient = SubResource("GradientTexture1D_oir0a")

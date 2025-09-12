@@ -1,0 +1,106 @@
+[gd_scene load_steps=8 format=3 uid="uid://c62s7v5e184oj"]
+
+[ext_resource type="Texture2D" uid="uid://bhseiff8a8byj" path="res://Assets/Sprites/ship.png" id="1_58rqr"]
+[ext_resource type="Script" uid="uid://cmaw3ljvf3lwu" path="res://Scripts/ship.gd" id="1_t8iee"]
+[ext_resource type="Texture2D" uid="uid://2ftmwh7foecu" path="res://Assets/Sprites/sun.png" id="2_21nli"]
+[ext_resource type="Script" uid="uid://dt38okh2gry1t" path="res://Scripts/parallax.gd" id="3_m13lc"]
+
+[sub_resource type="Animation" id="Animation_m13lc"]
+resource_name = "Wave"
+length = 10.0
+loop_mode = 1
+step = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0.0349066, -0.25, 0, 0.25, 0, -0.0349066, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 2.5, 7.5, 10)
+}
+
+[sub_resource type="Animation" id="Animation_sivrg"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_chb7m"]
+_data = {
+&"RESET": SubResource("Animation_sivrg"),
+&"Wave": SubResource("Animation_m13lc")
+}
+
+[node name="Ship" type="Node2D" node_paths=PackedStringArray("sprite")]
+z_index = 45
+script = ExtResource("1_t8iee")
+speed = 1000.0
+sprite = NodePath("Ship")
+
+[node name="Ship" type="Sprite2D" parent="."]
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_58rqr")
+offset = Vector2(91.65, -328)
+script = ExtResource("3_m13lc")
+amplitude_x_range = Vector2(0, 0)
+speed_x_range = Vector2(0, 0)
+
+[node name="PointLight2D" type="PointLight2D" parent="Ship"]
+position = Vector2(-168, -247)
+scale = Vector2(0.542514, 0.531247)
+color = Color(1, 0.506, 0.22, 1)
+energy = 3.34
+texture = ExtResource("2_21nli")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Ship"]
+position = Vector2(32, -217)
+scale = Vector2(0.542514, 0.531247)
+color = Color(1, 0.506, 0.22, 1)
+energy = 3.34
+texture = ExtResource("2_21nli")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Ship"]
+position = Vector2(164, -265)
+scale = Vector2(0.542514, 0.531247)
+color = Color(1, 0.506, 0.22, 1)
+energy = 3.34
+texture = ExtResource("2_21nli")
+
+[node name="PointLight2D4" type="PointLight2D" parent="Ship"]
+position = Vector2(253, -278)
+scale = Vector2(0.542514, 0.531247)
+color = Color(1, 0.506, 0.22, 1)
+energy = 3.34
+texture = ExtResource("2_21nli")
+
+[node name="PointLight2D5" type="PointLight2D" parent="Ship"]
+position = Vector2(336, -306)
+scale = Vector2(0.542514, 0.531247)
+color = Color(1, 0.506, 0.22, 1)
+energy = 3.34
+texture = ExtResource("2_21nli")
+
+[node name="PointLight2D6" type="PointLight2D" parent="Ship"]
+position = Vector2(445, -421)
+scale = Vector2(0.542514, 0.531247)
+color = Color(1, 0.506, 0.22, 1)
+energy = 3.34
+texture = ExtResource("2_21nli")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_chb7m")
+}
+autoplay = "Wave"
+speed_scale = 2.0
