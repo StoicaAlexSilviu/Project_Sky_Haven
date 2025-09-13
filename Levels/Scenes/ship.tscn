@@ -121,15 +121,16 @@ rope_length_on_release = 1000.0
 [node name="Rope" type="Node2D" parent="Ship/fishing_rod_base"]
 position = Vector2(4.88632, 469.597)
 script = ExtResource("5_rs7qd")
-rope_length = 300.0
+rope_length = 200.0
 damping = 13.105
 resolve_to_begin = true
 resolve_to_end = true
 metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeAnchor" type="Marker2D" parent="Ship/fishing_rod_base/Rope"]
-position = Vector2(175.945, -251.276)
+position = Vector2(28.6789, -40.9575)
 script = ExtResource("6_k83w8")
+apply_angle = true
 rope_path = NodePath("..")
 precise = true
 metadata/_custom_type_script = "uid://brklaoabvl73l"
@@ -137,7 +138,7 @@ metadata/_custom_type_script = "uid://brklaoabvl73l"
 [node name="ColorRect" type="ColorRect" parent="Ship/fishing_rod_base/Rope/RopeAnchor"]
 offset_right = 20.0
 offset_bottom = 20.0
-rotation = -1.5708
+rotation = -0.785398
 color = Color(0, 1, 0.116667, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
