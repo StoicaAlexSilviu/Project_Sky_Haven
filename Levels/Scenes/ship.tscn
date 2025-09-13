@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://c62s7v5e184oj"]
+[gd_scene load_steps=12 format=3 uid="uid://c62s7v5e184oj"]
 
 [ext_resource type="Texture2D" uid="uid://bhseiff8a8byj" path="res://Assets/Sprites/ship.png" id="1_58rqr"]
 [ext_resource type="Script" uid="uid://cmaw3ljvf3lwu" path="res://Scripts/ship.gd" id="1_t8iee"]
 [ext_resource type="Texture2D" uid="uid://2ftmwh7foecu" path="res://Assets/Sprites/sun.png" id="2_21nli"]
 [ext_resource type="Script" uid="uid://dt38okh2gry1t" path="res://Scripts/parallax.gd" id="3_m13lc"]
+[ext_resource type="Script" uid="uid://gf8radhhxpsj" path="res://Scripts/fishing_rod.gd" id="5_k83w8"]
 [ext_resource type="Script" uid="uid://b2shq2gjd4fvt" path="res://addons/ropesim/Rope.gd" id="5_rs7qd"]
 [ext_resource type="AudioStream" uid="uid://ccnggr0agxkr2" path="res://Assets/Sounds/motor-loop.wav" id="5_sivrg"]
 [ext_resource type="Script" uid="uid://brklaoabvl73l" path="res://addons/ropesim/RopeAnchor.gd" id="6_k83w8"]
@@ -106,21 +107,28 @@ offset_left = -391.0
 offset_top = -185.0
 offset_right = -383.0
 offset_bottom = 285.0
-rotation = -3.85783
+rotation = -3.75246
 color = Color(1, 0, 0, 1)
+script = ExtResource("5_k83w8")
+target_angle_degrees = 90.0
+forward_speed_deg_per_sec = 90.0
+return_speed_deg_per_sec = 600.0
+default_rotation_degrees = 150.0
+pivot_to_center = false
+rope_node_path = NodePath("Rope")
+rope_length_on_release = 1000.0
 
 [node name="Rope" type="Node2D" parent="Ship/fishing_rod_base"]
 position = Vector2(4.88632, 469.597)
 script = ExtResource("5_rs7qd")
 rope_length = 300.0
-gravity = 200.0
 damping = 13.105
 resolve_to_begin = true
 resolve_to_end = true
 metadata/_custom_type_script = "uid://b2shq2gjd4fvt"
 
 [node name="RopeAnchor" type="Marker2D" parent="Ship/fishing_rod_base/Rope"]
-position = Vector2(205.832, -236.466)
+position = Vector2(175.945, -251.276)
 script = ExtResource("6_k83w8")
 rope_path = NodePath("..")
 precise = true

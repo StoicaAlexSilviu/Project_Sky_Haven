@@ -204,7 +204,6 @@ day_night_gradient = SubResource("GradientTexture1D_oir0a")
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 layer = 2
-visible = false
 
 [node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground2"]
 motion_scale = Vector2(0.7, 1)
