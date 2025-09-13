@@ -56,7 +56,6 @@ fade_out_rate = 1.0
 stop_margin_db = 0.0
 
 [node name="Ship" type="Sprite2D" parent="."]
-scale = Vector2(0.75, 0.75)
 texture = ExtResource("1_58rqr")
 offset = Vector2(91.65, -328)
 script = ExtResource("3_m13lc")
@@ -126,3 +125,16 @@ stream = ExtResource("5_sivrg")
 volume_db = 10.0
 max_distance = 3840.0
 panning_strength = 2.34
+
+[node name="fishing_rod_base" type="ColorRect" parent="."]
+offset_left = -391.0
+offset_top = -185.0
+offset_right = -383.0
+offset_bottom = 285.0
+rotation = -3.85783
+color = Color(1, 0, 0, 1)
+
+[node name="bait" type="ColorRect" parent="fishing_rod_base"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

@@ -65,10 +65,11 @@ day_night_gradient = SubResource("GradientTexture1D_wl67n")
 [node name="Water" parent="." instance=ExtResource("6_dxt10")]
 
 [node name="Ship" parent="." instance=ExtResource("7_kaivw")]
-position = Vector2(1920, 1875)
+position = Vector2(1957, 1916)
 
 [node name="Camera2D" type="Camera2D" parent="Ship" node_paths=PackedStringArray("target", "sprite_for_facing")]
-limit_bottom = 2160
+position = Vector2(-37, -41)
+offset = Vector2(0, -795)
 drag_vertical_enabled = true
 editor_draw_limits = true
 editor_draw_drag_margin = true
@@ -99,5 +100,3 @@ texture = ExtResource("3_ti473")
 [node name="Tint" type="CanvasModulate" parent="ParallaxBackground2"]
 script = ExtResource("6_y3gq7")
 day_night_gradient = SubResource("GradientTexture1D_wl67n")
-
-[editable path="Water"]

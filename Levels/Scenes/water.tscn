@@ -1,11 +1,15 @@
-[gd_scene load_steps=14 format=3 uid="uid://k5sstgapy6nk"]
+[gd_scene load_steps=18 format=3 uid="uid://k5sstgapy6nk"]
 
 [ext_resource type="Texture2D" uid="uid://nvbg4d5lkia4" path="res://Assets/Sprites/water_layer01.png" id="1_jxypx"]
 [ext_resource type="Shader" uid="uid://cv7x7o4ijipvq" path="res://UI/shaders/water.gdshader" id="1_ynhty"]
 [ext_resource type="Script" uid="uid://dt38okh2gry1t" path="res://Scripts/parallax.gd" id="3_5gh26"]
+[ext_resource type="Texture2D" uid="uid://btgdf078ms01a" path="res://Assets/Sprites/lev_01.png" id="4_beqww"]
 [ext_resource type="Script" uid="uid://1qjfw15jiuku" path="res://Scripts/tint.gd" id="4_nydue"]
 [ext_resource type="Gradient" uid="uid://ct8wl7vvkeu8n" path="res://Assets/Gradients/Sky_gradient.tres" id="5_5k7mi"]
+[ext_resource type="Texture2D" uid="uid://dnpgv83teakaf" path="res://Assets/Sprites/Lev_02.png" id="5_v3pvp"]
 [ext_resource type="AudioStream" uid="uid://b3tqly1hrlava" path="res://Assets/Sounds/huge-ocean-waves-loop.wav" id="6_5k7mi"]
+[ext_resource type="Texture2D" uid="uid://dudvsmdom87wg" path="res://Assets/Sprites/Level_03.png" id="6_ne8an"]
+[ext_resource type="Texture2D" uid="uid://qy0obsg8gkth" path="res://Assets/Sprites/Sea_bottom.png" id="7_d521c"]
 [ext_resource type="AudioStream" uid="uid://cs63fnir4l5y1" path="res://Assets/Sounds/seagulls.wav" id="7_oir0a"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5gh26"]
@@ -138,19 +142,11 @@ amplitude_x_range = Vector2(40, 65)
 speed_x_range = Vector2(0.5, 0.5)
 amplitude_y_range = Vector2(6, 8)
 
-[node name="Tint" type="CanvasModulate" parent="ParallaxBackground"]
-z_index = 4096
-script = ExtResource("4_nydue")
-day_night_gradient = SubResource("GradientTexture1D_oir0a")
-
-[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
-layer = 2
-
-[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground2"]
+[node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.6, 1)
 motion_mirroring = Vector2(2304.35, 0)
 
-[node name="WaterLayer10" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer6"]
+[node name="WaterLayer10" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
 z_index = 46
 texture_repeat = 2
 position = Vector2(-2318, 1829)
@@ -164,6 +160,50 @@ script = ExtResource("3_5gh26")
 amplitude_x_range = Vector2(65, 95)
 speed_x_range = Vector2(0.6, 0.6)
 amplitude_y_range = Vector2(7, 9)
+
+[node name="Lev01" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6/WaterLayer10"]
+show_behind_parent = true
+z_index = 46
+position = Vector2(-410, 183.358)
+texture = ExtResource("4_beqww")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 20000, 2160)
+
+[node name="Lev02" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6/WaterLayer10"]
+show_behind_parent = true
+z_index = 46
+position = Vector2(-410, 2343.36)
+texture = ExtResource("5_v3pvp")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 20000, 2160)
+
+[node name="Lev03" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6/WaterLayer10"]
+show_behind_parent = true
+z_index = 46
+position = Vector2(-410, 4503.36)
+texture = ExtResource("6_ne8an")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 20000, 2160)
+
+[node name="Lev04" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6/WaterLayer10"]
+show_behind_parent = true
+z_index = 46
+position = Vector2(-410, 6273.33)
+texture = ExtResource("7_d521c")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 20000, 390)
+
+[node name="Tint" type="CanvasModulate" parent="ParallaxBackground"]
+z_index = 4096
+script = ExtResource("4_nydue")
+day_night_gradient = SubResource("GradientTexture1D_oir0a")
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
+layer = 2
 
 [node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground2"]
 motion_scale = Vector2(0.7, 1)
