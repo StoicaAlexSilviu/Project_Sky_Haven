@@ -99,3 +99,5 @@ texture = ExtResource("3_ti473")
 [node name="Tint" type="CanvasModulate" parent="ParallaxBackground2"]
 script = ExtResource("6_y3gq7")
 day_night_gradient = SubResource("GradientTexture1D_wl67n")
+
+[editable path="Water"]

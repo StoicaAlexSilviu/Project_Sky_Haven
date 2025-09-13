@@ -1,10 +1,12 @@
-[gd_scene load_steps=12 format=3 uid="uid://k5sstgapy6nk"]
+[gd_scene load_steps=14 format=3 uid="uid://k5sstgapy6nk"]
 
 [ext_resource type="Texture2D" uid="uid://nvbg4d5lkia4" path="res://Assets/Sprites/water_layer01.png" id="1_jxypx"]
 [ext_resource type="Shader" uid="uid://cv7x7o4ijipvq" path="res://UI/shaders/water.gdshader" id="1_ynhty"]
 [ext_resource type="Script" uid="uid://dt38okh2gry1t" path="res://Scripts/parallax.gd" id="3_5gh26"]
 [ext_resource type="Script" uid="uid://1qjfw15jiuku" path="res://Scripts/tint.gd" id="4_nydue"]
 [ext_resource type="Gradient" uid="uid://ct8wl7vvkeu8n" path="res://Assets/Gradients/Sky_gradient.tres" id="5_5k7mi"]
+[ext_resource type="AudioStream" uid="uid://b3tqly1hrlava" path="res://Assets/Sounds/huge-ocean-waves-loop.wav" id="6_5k7mi"]
+[ext_resource type="AudioStream" uid="uid://cs63fnir4l5y1" path="res://Assets/Sounds/seagulls.wav" id="7_oir0a"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_5gh26"]
 shader = ExtResource("1_ynhty")
@@ -43,7 +45,7 @@ motion_mirroring = Vector2(384.09, 0)
 z_index = 46
 texture_repeat = 2
 material = SubResource("ShaderMaterial_5gh26")
-position = Vector2(-317, 1718)
+position = Vector2(-1968, 1718)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_jxypx")
 centered = false
@@ -64,7 +66,7 @@ motion_mirroring = Vector2(767.86, 0)
 z_index = 46
 texture_repeat = 2
 material = SubResource("ShaderMaterial_65rvu")
-position = Vector2(-374, 1735)
+position = Vector2(-2025, 1735)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_jxypx")
 centered = false
@@ -84,7 +86,7 @@ motion_mirroring = Vector2(1152.35, 0)
 z_index = 46
 texture_repeat = 2
 material = SubResource("ShaderMaterial_nydue")
-position = Vector2(-565, 1755)
+position = Vector2(-2216, 1755)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_jxypx")
 centered = false
@@ -104,7 +106,7 @@ motion_mirroring = Vector2(1535.88, 0)
 z_index = 46
 texture_repeat = 2
 material = SubResource("ShaderMaterial_5k7mi")
-position = Vector2(-622, 1775)
+position = Vector2(-2273, 1775)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("1_jxypx")
 centered = false
@@ -124,7 +126,7 @@ motion_mirroring = Vector2(1919.97, 0)
 z_index = 46
 texture_repeat = 2
 material = SubResource("ShaderMaterial_oir0a")
-position = Vector2(-1621, 1795)
+position = Vector2(-3272, 1795)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_jxypx")
 centered = false
@@ -151,7 +153,7 @@ motion_mirroring = Vector2(2304.35, 0)
 [node name="WaterLayer10" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer6"]
 z_index = 46
 texture_repeat = 2
-position = Vector2(-667, 1829)
+position = Vector2(-2318, 1829)
 scale = Vector2(0.6, 0.6)
 texture = ExtResource("1_jxypx")
 centered = false
@@ -170,7 +172,7 @@ motion_mirroring = Vector2(2688.2, 0)
 [node name="WaterLayer01" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer7"]
 z_index = 47
 texture_repeat = 2
-position = Vector2(-2751, 1849)
+position = Vector2(-4402, 1849)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_jxypx")
 centered = false
@@ -189,7 +191,7 @@ motion_mirroring = Vector2(3072, 0)
 [node name="WaterLayer03" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer8"]
 z_index = 48
 texture_repeat = 2
-position = Vector2(-1410, 1879)
+position = Vector2(-3061, 1879)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_jxypx")
 centered = false
@@ -208,7 +210,7 @@ motion_mirroring = Vector2(3455.73, 0)
 [node name="WaterLayer04" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer9"]
 z_index = 49
 texture_repeat = 2
-position = Vector2(0, 1926)
+position = Vector2(-1651, 1926)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("1_jxypx")
 centered = false
@@ -227,7 +229,7 @@ motion_mirroring = Vector2(3840, 0)
 modulate = Color(0.603923, 0.603923, 0.603923, 1)
 z_index = 51
 texture_repeat = 2
-position = Vector2(-790, 1994)
+position = Vector2(-2441, 1994)
 texture = ExtResource("1_jxypx")
 centered = false
 region_enabled = true
@@ -242,3 +244,12 @@ amplitude_y_range = Vector2(12, 14)
 z_index = 4096
 script = ExtResource("4_nydue")
 day_night_gradient = SubResource("GradientTexture1D_oir0a")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_5k7mi")
+autoplay = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_oir0a")
+volume_db = 10.0
+autoplay = true
