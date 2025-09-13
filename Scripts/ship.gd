@@ -86,24 +86,24 @@ func _process(delta: float) -> void:
 func _is_playing() -> bool:
 	if move_sound is AudioStreamPlayer2D:
 		return (move_sound as AudioStreamPlayer2D).playing
-	elif move_sound is AudioStreamPlayer2D:
-		return (move_sound as AudioStreamPlayer2D).playing
+	elif move_sound is AudioStreamPlayer:
+		return (move_sound as AudioStreamPlayer).playing
 	return false
 
 func _play() -> void:
 	if move_sound is AudioStreamPlayer2D:
 		(move_sound as AudioStreamPlayer2D).play()
-	elif move_sound is AudioStreamPlayer2D:
-		(move_sound as AudioStreamPlayer2D).play()
+	elif move_sound is AudioStreamPlayer:
+		(move_sound as AudioStreamPlayer).play()
 
 func _stop() -> void:
 	if move_sound is AudioStreamPlayer2D:
 		(move_sound as AudioStreamPlayer2D).stop()
-	elif move_sound is AudioStreamPlayer2D:
-		(move_sound as AudioStreamPlayer2D).stop()
+	elif move_sound is AudioStreamPlayer:
+		(move_sound as AudioStreamPlayer).stop()
 
 func _set_player_volume(db: float) -> void:
 	if move_sound is AudioStreamPlayer2D:
 		(move_sound as AudioStreamPlayer2D).volume_db = db
-	elif move_sound is AudioStreamPlayer2D:
-		(move_sound as AudioStreamPlayer2D).volume_db = db
+	elif move_sound is AudioStreamPlayer:
+		(move_sound as AudioStreamPlayer).volume_db = db
