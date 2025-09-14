@@ -18,6 +18,10 @@ func _process(delta: float) -> void:
 	if not target:
 		return
 
+	if GlobalCamera.camera_hook:
+		target = $"../Ship_ParallaxBackground_ParallaxLayer#Ship/Ship/fishing_rod_base/Rope/RopeAnchor/ColorRect"
+		$".".offset.y = 0
+
 	# Always keep camera position snapped to the target
 	global_position = target.global_position
 

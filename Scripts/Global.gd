@@ -1,5 +1,6 @@
 extends Node
 
+@onready var water_vis = true
 
 # Autoload (Singleton) script in 4.2.1
 func _ready() -> void:

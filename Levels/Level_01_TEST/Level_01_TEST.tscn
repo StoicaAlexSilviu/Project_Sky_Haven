@@ -64,19 +64,19 @@ day_night_gradient = SubResource("GradientTexture1D_wl67n")
 
 [node name="Water" parent="." instance=ExtResource("6_dxt10")]
 
-[node name="Ship" parent="." instance=ExtResource("7_kaivw")]
-position = Vector2(1957, 1916)
+[node name="Ship_ParallaxBackground_ParallaxLayer#Ship" parent="." instance=ExtResource("7_kaivw")]
+position = Vector2(1927, 1933)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target", "sprite_for_facing")]
 position = Vector2(1920, 1875)
-offset = Vector2(0, -795)
-drag_vertical_enabled = true
+offset = Vector2(0, -820)
+limit_bottom = 5825
 editor_draw_limits = true
 editor_draw_drag_margin = true
 script = ExtResource("11_dxt10")
-target = NodePath("../Ship")
+target = NodePath("../Ship_ParallaxBackground_ParallaxLayer#Ship")
 lead_pixels = 500.0
-sprite_for_facing = NodePath("../Ship")
+sprite_for_facing = NodePath("../Ship_ParallaxBackground_ParallaxLayer#Ship")
 lead_smooth = 0.5
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
@@ -99,3 +99,5 @@ texture = ExtResource("3_ti473")
 [node name="Tint" type="CanvasModulate" parent="ParallaxBackground2"]
 script = ExtResource("6_y3gq7")
 day_night_gradient = SubResource("GradientTexture1D_wl67n")
+
+[editable path="Ship_ParallaxBackground_ParallaxLayer#Ship"]
