@@ -13,5 +13,6 @@ func set_time(h: int, m: int) -> void:
 		return # no spam
 	hour = h
 	minute = m
-	text = "%02d:%02d" % [h, m]
+	#text = "%02d:%02d" % [h, m]     #the old version
+	text = "%02d:00" % [h,]
 	time_changed.emit(text, hour, minute)

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcud7xlsnav8s"]
+
+[ext_resource type="Texture2D" uid="uid://deu6sypn3olms" path="res://Assets/Sprites/fish_slot.png" id="1_01xah"]
+[ext_resource type="Script" uid="uid://diir1xydwb5o6" path="res://Scripts/fish_slot.gd" id="1_m2ruv"]
+[ext_resource type="Texture2D" uid="uid://dhjphgcldic6g" path="res://Assets/Sprites/fish_slot_catch.png" id="2_m2ruv"]
+
+[node name="fish_slot" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m2ruv")
+
+[node name="FishSlot" type="Sprite2D" parent="."]
+position = Vector2(0, 1)
+texture = ExtResource("1_01xah")
+
+[node name="FishSlotCatch" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, 1)
+texture = ExtResource("2_m2ruv")

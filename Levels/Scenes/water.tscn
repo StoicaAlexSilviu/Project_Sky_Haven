@@ -47,7 +47,7 @@ script = ExtResource("1_v3pvp")
 layer = -1
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.1, 0.1)
+motion_scale = Vector2(0.1, 1)
 motion_mirroring = Vector2(384.09, 0)
 
 [node name="WaterLayer02" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
@@ -68,7 +68,7 @@ amplitude_y_range = Vector2(2, 3)
 speed_y_range = Vector2(0.2, 0.3)
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.2, 0.2)
+motion_scale = Vector2(0.2, 1)
 motion_mirroring = Vector2(767.86, 0)
 
 [node name="WaterLayer06" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
@@ -88,7 +88,7 @@ speed_x_range = Vector2(0.2, 0.2)
 amplitude_y_range = Vector2(3, 5)
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.3, 0.3)
+motion_scale = Vector2(0.3, 1)
 motion_mirroring = Vector2(1152.35, 0)
 
 [node name="WaterLayer07" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
@@ -108,7 +108,7 @@ speed_x_range = Vector2(0.3, 0.3)
 amplitude_y_range = Vector2(4, 6)
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.4, 0.4)
+motion_scale = Vector2(0.4, 1)
 motion_mirroring = Vector2(1535.88, 0)
 
 [node name="WaterLayer08" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
@@ -128,7 +128,7 @@ speed_x_range = Vector2(0.4, 0.4)
 amplitude_y_range = Vector2(5, 7)
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.5, 0.5)
+motion_scale = Vector2(0.5, 1)
 motion_mirroring = Vector2(1919.97, 0)
 
 [node name="WaterLayer09" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
@@ -148,7 +148,7 @@ speed_x_range = Vector2(0.5, 0.5)
 amplitude_y_range = Vector2(6, 8)
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.6, 0.6)
+motion_scale = Vector2(0.6, 1)
 motion_mirroring = Vector2(2304.35, 0)
 
 [node name="WaterLayer10" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
@@ -201,6 +201,7 @@ texture = ExtResource("7_d521c")
 centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 20000, 390)
+region_filter_clip_enabled = true
 
 [node name="Tint" type="CanvasModulate" parent="ParallaxBackground"]
 z_index = 4096
@@ -211,6 +212,7 @@ day_night_gradient = SubResource("GradientTexture1D_oir0a")
 position = Vector2(0, 1994)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/Area2D"]
+visible = false
 z_index = 92
 position = Vector2(-13.5, 5349)
 shape = SubResource("RectangleShape2D_v3pvp")
@@ -219,13 +221,13 @@ shape = SubResource("RectangleShape2D_v3pvp")
 layer = 2
 
 [node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground2"]
-motion_scale = Vector2(0.7, 0.7)
+motion_scale = Vector2(0.7, 1)
 motion_mirroring = Vector2(2688.2, 0)
 
 [node name="WaterLayer01" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer7"]
 z_index = 47
 texture_repeat = 2
-position = Vector2(-4402, 1849)
+position = Vector2(-4402, 1881)
 scale = Vector2(0.7, 0.7)
 texture = ExtResource("1_jxypx")
 centered = false
@@ -238,13 +240,13 @@ speed_x_range = Vector2(0.7, 0.7)
 amplitude_y_range = Vector2(8, 10)
 
 [node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground2"]
-motion_scale = Vector2(0.8, 0.8)
+motion_scale = Vector2(0.8, 1)
 motion_mirroring = Vector2(3072, 0)
 
 [node name="WaterLayer03" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer8"]
 z_index = 48
 texture_repeat = 2
-position = Vector2(-3061, 1879)
+position = Vector2(-3061, 1929)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("1_jxypx")
 centered = false
@@ -257,13 +259,13 @@ speed_x_range = Vector2(0.8, 0.8)
 amplitude_y_range = Vector2(9, 2)
 
 [node name="ParallaxLayer9" type="ParallaxLayer" parent="ParallaxBackground2"]
-motion_scale = Vector2(0.9, 0.9)
+motion_scale = Vector2(0.9, 1)
 motion_mirroring = Vector2(3455.73, 0)
 
 [node name="WaterLayer04" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer9"]
 z_index = 49
 texture_repeat = 2
-position = Vector2(-1651, 1926)
+position = Vector2(-1083, 1994)
 scale = Vector2(0.9, 0.9)
 texture = ExtResource("1_jxypx")
 centered = false
@@ -279,10 +281,10 @@ amplitude_y_range = Vector2(10, 30)
 motion_mirroring = Vector2(3840, 0)
 
 [node name="WaterLayer05" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer10"]
-modulate = Color(0.603923, 0.603923, 0.603923, 1)
+modulate = Color(0.89, 0.89, 0.89, 1)
 z_index = 51
 texture_repeat = 2
-position = Vector2(-2441, 1994)
+position = Vector2(-2441, 2085)
 texture = ExtResource("1_jxypx")
 centered = false
 region_enabled = true
@@ -290,6 +292,86 @@ region_rect = Rect2(0, 0, 10000, 580.145)
 region_filter_clip_enabled = true
 script = ExtResource("3_5gh26")
 amplitude_x_range = Vector2(165, 200)
+speed_x_range = Vector2(1, 1)
+amplitude_y_range = Vector2(12, 14)
+
+[node name="ParallaxLayer11" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(1.1, 1)
+motion_mirroring = Vector2(4222.28, 0)
+
+[node name="WaterLayer05" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer11"]
+modulate = Color(0.73, 0.73, 0.73, 1)
+z_index = 51
+texture_repeat = 2
+position = Vector2(-4535, 2154)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_jxypx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 580.145)
+region_filter_clip_enabled = true
+script = ExtResource("3_5gh26")
+amplitude_x_range = Vector2(165, 250)
+speed_x_range = Vector2(1, 1)
+amplitude_y_range = Vector2(12, 14)
+
+[node name="ParallaxLayer12" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(1.2, 1)
+motion_mirroring = Vector2(4604.66, 0)
+
+[node name="WaterLayer05" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer12"]
+modulate = Color(0.46, 0.46, 0.46, 1)
+z_index = 51
+texture_repeat = 2
+position = Vector2(-3336, 2290)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_jxypx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 580.145)
+region_filter_clip_enabled = true
+script = ExtResource("3_5gh26")
+amplitude_x_range = Vector2(165, 300)
+speed_x_range = Vector2(1, 1)
+amplitude_y_range = Vector2(12, 14)
+
+[node name="ParallaxLayer13" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(1.2, 1)
+motion_mirroring = Vector2(4991.77, 0)
+
+[node name="WaterLayer05" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer13"]
+modulate = Color(0.38, 0.38, 0.38, 1)
+z_index = 51
+texture_repeat = 2
+position = Vector2(-2273, 2400)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("1_jxypx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 580.145)
+region_filter_clip_enabled = true
+script = ExtResource("3_5gh26")
+amplitude_x_range = Vector2(165, 350)
+speed_x_range = Vector2(1, 1)
+amplitude_y_range = Vector2(12, 14)
+
+[node name="ParallaxLayer14" type="ParallaxLayer" parent="ParallaxBackground2"]
+motion_scale = Vector2(1.2, 1)
+motion_mirroring = Vector2(5376, 0)
+
+[node name="WaterLayer05" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer14"]
+modulate = Color(0.38, 0.38, 0.38, 1)
+z_index = 51
+texture_repeat = 2
+position = Vector2(-720, 2526)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("1_jxypx")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 10000, 580.145)
+region_filter_clip_enabled = true
+script = ExtResource("3_5gh26")
+amplitude_x_range = Vector2(165, 400)
 speed_x_range = Vector2(1, 1)
 amplitude_y_range = Vector2(12, 14)
 

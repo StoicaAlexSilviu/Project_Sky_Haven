@@ -19,10 +19,15 @@ func _process(delta: float) -> void:
 		return
 
 	if GlobalCamera.camera_hook:
-		target = $"../Ship_ParallaxBackground_ParallaxLayer#Ship/Ship/fishing_rod_base/Rope/RopeAnchor/ColorRect"
+		target = $"../Ship/Ship/fishing_rod_base/Rope/RopeAnchor/BaitHook"
 		$".".offset.y = 0
-
-	# Always keep camera position snapped to the target
+		
+	if GlobalCamera.camera_ship:
+		target = $"../Ship"
+		$".".offset.y = -820.0
+	
+		
+			# Always keep camera position snapped to the target
 	global_position = target.global_position
 
 	# --- Determine facing (for horizontal lead) ---

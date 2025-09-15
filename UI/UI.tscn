@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://c30mpb71f46pg"]
+[gd_scene load_steps=7 format=3 uid="uid://c30mpb71f46pg"]
 
 [ext_resource type="FontFile" uid="uid://x6thkh2jxesg" path="res://Assets/Fonts/MouseMemoirs-Regular.ttf" id="1_6dd3c"]
 [ext_resource type="Script" uid="uid://cmx6tbt60pbjm" path="res://UI/ui.gd" id="1_dhe1o"]
+[ext_resource type="Texture2D" uid="uid://cn6qouqkl5ob1" path="res://Assets/Sprites/dot.png" id="3_f1fl4"]
+[ext_resource type="PackedScene" uid="uid://bcud7xlsnav8s" path="res://Levels/Scenes/fish_slot.tscn" id="3_q0uhn"]
+[ext_resource type="Texture2D" uid="uid://deu6sypn3olms" path="res://Assets/Sprites/fish_slot.png" id="4_jqf55"]
+[ext_resource type="PackedScene" uid="uid://dtmlu32foucsc" path="res://Levels/Scenes/minigame.tscn" id="6_jqf55"]
 
 [node name="Ui" type="Control" node_paths=PackedStringArray("time_label")]
 layout_mode = 3
@@ -13,10 +17,108 @@ time_label = NodePath("CanvasLayer/TimeLabel")
 layer = 126
 
 [node name="TimeLabel" type="Label" parent="CanvasLayer"]
-offset_left = 43.0
-offset_top = 34.0
-offset_right = 185.0
-offset_bottom = 149.0
+offset_left = 92.0
+offset_top = 50.0
+offset_right = 234.0
+offset_bottom = 165.0
+theme_override_colors/font_color = Color(0.432068, 0.110909, 7.21961e-08, 1)
 theme_override_fonts/font = ExtResource("1_6dd3c")
-theme_override_font_sizes/font_size = 100
+theme_override_font_sizes/font_size = 80
 text = "12:32"
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/TimeLabel"]
+show_behind_parent = true
+position = Vector2(61.955, 48)
+rotation = 1.5708
+texture = ExtResource("3_f1fl4")
+
+[node name="FishSlot" type="Sprite2D" parent="CanvasLayer/TimeLabel"]
+position = Vector2(63, 48)
+rotation = 1.5708
+texture = ExtResource("4_jqf55")
+
+[node name="CenterContainer4" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -1841.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="HBoxContainer" parent="CanvasLayer/CenterContainer4"]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer/CenterContainer4/MarginContainer"]
+custom_minimum_size = Vector2(150, 300)
+layout_mode = 2
+
+[node name="fish_slot" parent="CanvasLayer/CenterContainer4/MarginContainer/CenterContainer" instance=ExtResource("3_q0uhn")]
+layout_mode = 2
+slot_number = 1
+
+[node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer/CenterContainer4/MarginContainer"]
+custom_minimum_size = Vector2(150, 300)
+layout_mode = 2
+
+[node name="fish_slot" parent="CanvasLayer/CenterContainer4/MarginContainer/CenterContainer2" instance=ExtResource("3_q0uhn")]
+layout_mode = 2
+slot_number = 2
+
+[node name="CenterContainer3" type="CenterContainer" parent="CanvasLayer/CenterContainer4/MarginContainer"]
+custom_minimum_size = Vector2(150, 300)
+layout_mode = 2
+
+[node name="fish_slot" parent="CanvasLayer/CenterContainer4/MarginContainer/CenterContainer3" instance=ExtResource("3_q0uhn")]
+layout_mode = 2
+slot_number = 3
+
+[node name="CenterContainer4" type="CenterContainer" parent="CanvasLayer/CenterContainer4/MarginContainer"]
+custom_minimum_size = Vector2(150, 300)
+layout_mode = 2
+
+[node name="fish_slot" parent="CanvasLayer/CenterContainer4/MarginContainer/CenterContainer4" instance=ExtResource("3_q0uhn")]
+layout_mode = 2
+slot_number = 4
+
+[node name="CenterContainer5" type="CenterContainer" parent="CanvasLayer/CenterContainer4/MarginContainer"]
+custom_minimum_size = Vector2(150, 300)
+layout_mode = 2
+
+[node name="fish_slot" parent="CanvasLayer/CenterContainer4/MarginContainer/CenterContainer5" instance=ExtResource("3_q0uhn")]
+layout_mode = 2
+slot_number = 5
+
+[node name="CenterContainer6" type="CenterContainer" parent="CanvasLayer/CenterContainer4/MarginContainer"]
+custom_minimum_size = Vector2(150, 300)
+layout_mode = 2
+
+[node name="fish_slot" parent="CanvasLayer/CenterContainer4/MarginContainer/CenterContainer6" instance=ExtResource("3_q0uhn")]
+layout_mode = 2
+slot_number = 6
+
+[node name="CenterContainer7" type="CenterContainer" parent="CanvasLayer/CenterContainer4/MarginContainer"]
+custom_minimum_size = Vector2(150, 300)
+layout_mode = 2
+
+[node name="fish_slot" parent="CanvasLayer/CenterContainer4/MarginContainer/CenterContainer7" instance=ExtResource("3_q0uhn")]
+layout_mode = 2
+slot_number = 7
+
+[node name="CenterContainer8" type="CenterContainer" parent="CanvasLayer/CenterContainer4/MarginContainer"]
+custom_minimum_size = Vector2(150, 300)
+layout_mode = 2
+
+[node name="fish_slot" parent="CanvasLayer/CenterContainer4/MarginContainer/CenterContainer8" instance=ExtResource("3_q0uhn")]
+layout_mode = 2
+slot_number = 8
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Minigame" parent="CanvasLayer/CenterContainer" instance=ExtResource("6_jqf55")]
+visible = false
+layout_mode = 2

@@ -31,10 +31,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var inc := Input.is_action_pressed(increase_action)
 	var dec := Input.is_action_pressed(decrease_action)
-
+	
 	if inc and not dec:
 		_rope_len += rope_change_speed * delta
-		GlobalCamera.camera_hook = true
+		#GlobalCamera.camera_hook = true
 	elif dec and not inc:
 		_rope_len -= rope_change_speed * delta
 	# if both or neither are pressed, do nothing
@@ -56,7 +56,7 @@ func _apply_rope_length(new_length: float) -> void:
 
 	var rope: Object = get_node(rope_node_path)
 	var clamped: float = clampf(max(0.0, new_length), rope_min_length, rope_max_length)
-
+	print(new_length)
 	# 1) Preferred explicit setter method
 	if rope_setter_method != "" and rope.has_method(rope_setter_method):
 		rope.call(rope_setter_method, clamped)
@@ -114,7 +114,10 @@ func _has_property(obj: Object, prop_name: String) -> bool:
 
 func _on_area_2d_area_entered(_area: Area2D) -> void:
 	Global.water_vis = false
-
+	GlobalCamera.camera_hook = true
+	GlobalCamera.camera_ship = false
 
 func _on_area_2d_area_exited(_area: Area2D) -> void:
 	Global.water_vis = true
+	GlobalCamera.camera_hook = false
+	GlobalCamera.camera_ship = true

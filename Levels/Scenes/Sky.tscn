@@ -44,7 +44,7 @@ use_hdr = true
 scroll_ignore_camera_zoom = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0, 0)
+motion_scale = Vector2(0, 1)
 
 [node name="Sky" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 texture = ExtResource("1_au6na")
@@ -63,7 +63,7 @@ max_alpha = 1.0
 [node name="Sun_and_moon" type="Node2D" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2(1920, 1740)
 script = ExtResource("6_1o5p6")
-day_length_minutes = 30.0
+day_length_minutes = 2.0
 start_hour = 9
 deg_offset = 180.0
 radius_x = 1250.0
