@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 	var inc := Input.is_action_pressed(increase_action)
 	var dec := Input.is_action_pressed(decrease_action)
 	
-	if inc and not dec:
+	if inc and not dec and !Global.ship_moves:
 		_rope_len += rope_change_speed * delta
 		#GlobalCamera.camera_hook = true
 	elif dec and not inc:
@@ -116,8 +116,10 @@ func _on_area_2d_area_entered(_area: Area2D) -> void:
 	Global.water_vis = false
 	GlobalCamera.camera_hook = true
 	GlobalCamera.camera_ship = false
+	Global.ship_can_move = false
 
 func _on_area_2d_area_exited(_area: Area2D) -> void:
 	Global.water_vis = true
 	GlobalCamera.camera_hook = false
 	GlobalCamera.camera_ship = true
+	Global.ship_can_move = true
