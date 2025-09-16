@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://blwwmh7m47d7l"]
+
+[ext_resource type="Script" uid="uid://bh7ckxw8ybofs" path="res://Scripts/fish_ai.gd" id="1_54pp0"]
+[ext_resource type="Texture2D" uid="uid://cjq4dxwpthxlx" path="res://Assets/Sprites/Fishes - Placeholder/Fish1/tile016.png" id="1_fks4u"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fef8b"]
+radius = 11.5
+height = 26.0
+
+[node name="Fish" type="Node2D"]
+
+[node name="Fish1" type="CharacterBody2D" parent="."]
+script = ExtResource("1_54pp0")
+
+[node name="Sprite2D - Fish1" type="Sprite2D" parent="Fish1"]
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("1_fks4u")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fish1"]
+position = Vector2(-2, 0)
+scale = Vector2(5, 2.5)
+shape = SubResource("CapsuleShape2D_fef8b")
