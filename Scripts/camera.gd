@@ -50,7 +50,7 @@ func _process(delta: float) -> void:
 	_last_facing = facing
 
 	# --- Lead activation & idle timer ---
-	if Input.is_action_pressed("ui_left") or Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("ui_left") and Global.ship_can_move or Input.is_action_pressed("ui_right") and Global.ship_can_move:
 		_idle_timer = 0.0
 		_lead_active = true   # activate lead the first time input is pressed
 	else:

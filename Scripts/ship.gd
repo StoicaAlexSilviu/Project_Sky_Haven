@@ -40,10 +40,12 @@ func _process(delta: float) -> void:
 	if Input.is_action_pressed("ui_right"): input_dir += 1.0
 
 	# Inertia
-	if input_dir != 0.0:
+	if input_dir != 0.0 and Global.ship_can_move:
 		velocity = move_toward(velocity, input_dir * speed, acceleration * delta)
+		Global.ship_moves = true
 	else:
 		velocity = move_toward(velocity, 0.0, friction * delta)
+		Global.ship_moves = false
 
 	# Move
 	position.x += velocity * delta

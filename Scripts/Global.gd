@@ -1,7 +1,8 @@
 extends Node
 
 var water_vis := true
-
+var ship_moves := false
+var ship_can_move := true
 var fish_catch := 0
 
 func _ready() -> void:
