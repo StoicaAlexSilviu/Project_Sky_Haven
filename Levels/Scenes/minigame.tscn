@@ -1,21 +1,29 @@
-[gd_scene load_steps=7 format=3 uid="uid://dtmlu32foucsc"]
+[gd_scene load_steps=9 format=3 uid="uid://dtmlu32foucsc"]
 
 [ext_resource type="Texture2D" uid="uid://cdg4a2ci64jd8" path="res://Assets/Sprites/bg_minigame.png" id="1_ji4qr"]
+[ext_resource type="Texture2D" uid="uid://b6owjvp2yp0jh" path="res://Assets/Sprites/minigame_bg.png" id="1_pp5ar"]
 [ext_resource type="Texture2D" uid="uid://c0ur2qiual07l" path="res://Assets/Sprites/game_1.png" id="2_0bbni"]
 [ext_resource type="Texture2D" uid="uid://bpqaxj5yyjdre" path="res://Assets/Sprites/game_2.png" id="3_pp5ar"]
 [ext_resource type="Texture2D" uid="uid://bt1b5at8vx05h" path="res://Assets/Sprites/game_3.png" id="4_jqtna"]
 [ext_resource type="Texture2D" uid="uid://cffmnjm8q3d1" path="res://Assets/Sprites/dots_1.png" id="5_362ht"]
 [ext_resource type="Texture2D" uid="uid://bjhfps8y5e6p5" path="res://Assets/Sprites/dots_2.png" id="6_jgvtm"]
+[ext_resource type="Texture2D" uid="uid://dk7oic8ffheid" path="res://Assets/Sprites/fish_mini.png" id="8_jqtna"]
 
-[node name="Minigame" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="Minigame" type="CenterContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="MinigameBg" type="Sprite2D" parent="."]
+position = Vector2(0, -34.5)
+texture = ExtResource("1_pp5ar")
+
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 128.5)
 texture = ExtResource("1_ji4qr")
 
 [node name="Game1" type="Sprite2D" parent="Sprite2D"]
@@ -36,3 +44,7 @@ texture = ExtResource("5_362ht")
 
 [node name="Dots2" type="Sprite2D" parent="Sprite2D"]
 texture = ExtResource("6_jgvtm")
+
+[node name="FishMini" type="Sprite2D" parent="."]
+position = Vector2(6, 128.5)
+texture = ExtResource("8_jqtna")
