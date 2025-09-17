@@ -10,8 +10,8 @@ func _ready() -> void:
 	randomize()
 
 	# Auto-fit the fish "ocean" to the current viewport
-	var vr := get_viewport_rect()
-	var ocean_rect := Rect2(vr.position, vr.size)
+	#var vr := get_viewport_rect()
+	#var ocean_rect := Rect2(vr.position, vr.size)
 
 	for i in count:
 		var f := fish_scene.instantiate()                    # your Fish.tscn root is CharacterBody2D

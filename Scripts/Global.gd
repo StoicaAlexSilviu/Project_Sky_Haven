@@ -5,6 +5,7 @@ var ship_moves := false
 var ship_can_move := true
 var fish_catch := 0
 
+
 func _ready() -> void:
 	if OS.has_feature("pc"):
 		DisplayServer.window_set_size(Vector2i(3840, 2160))

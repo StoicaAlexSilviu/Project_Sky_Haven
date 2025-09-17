@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dq6fndlv5e6xu"]
+[gd_scene load_steps=18 format=3 uid="uid://dq6fndlv5e6xu"]
 
 [ext_resource type="PackedScene" uid="uid://eg7ou0hair3i" path="res://Levels/Scenes/Sky.tscn" id="1_02pw6"]
 [ext_resource type="PackedScene" uid="uid://c30mpb71f46pg" path="res://UI/UI.tscn" id="2_8otku"]
@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://db5qu73i0gbnu" path="res://Scripts/camera.gd" id="11_dxt10"]
 [ext_resource type="Script" uid="uid://dwup8voh0xlmh" path="res://Levels/Level_01_TEST/fishes.gd" id="14_5c0dn"]
 [ext_resource type="PackedScene" uid="uid://blwwmh7m47d7l" path="res://Levels/Scenes/fish.tscn" id="15_wl67n"]
+[ext_resource type="PackedScene" uid="uid://dybnell8fqmmv" path="res://Levels/Scenes/Music.tscn" id="16_ovao5"]
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_wl67n"]
 gradient = ExtResource("7_5c0dn")
@@ -105,5 +106,7 @@ day_night_gradient = SubResource("GradientTexture1D_wl67n")
 [node name="Fishes" type="Node2D" parent="."]
 script = ExtResource("14_5c0dn")
 fish_scene = ExtResource("15_wl67n")
+
+[node name="Music" parent="." instance=ExtResource("16_ovao5")]
 
 [editable path="Ship"]

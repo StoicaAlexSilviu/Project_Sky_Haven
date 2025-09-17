@@ -1,11 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://blwwmh7m47d7l"]
+[gd_scene load_steps=5 format=3 uid="uid://blwwmh7m47d7l"]
 
 [ext_resource type="Script" uid="uid://bh7ckxw8ybofs" path="res://Scripts/fish_ai.gd" id="1_54pp0"]
-[ext_resource type="Texture2D" uid="uid://cjq4dxwpthxlx" path="res://Assets/Sprites/Fishes - Placeholder/Fish1/tile016.png" id="1_fks4u"]
+[ext_resource type="Texture2D" uid="uid://djtgvx2a0x187" path="res://Assets/Sprites/fish_big.png" id="2_54pp0"]
+[ext_resource type="Material" uid="uid://cg0dgc10wwcl1" path="res://Assets/Gradients/Stars_canvas_item_material.tres" id="2_fef8b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fef8b"]
-radius = 11.5
-height = 26.0
+radius = 5.39999
+height = 76.0
 
 [node name="Fish" type="Node2D"]
 
@@ -14,12 +15,14 @@ position = Vector2(2438, 488)
 script = ExtResource("1_54pp0")
 
 [node name="Sprite2D - Fish1" type="Sprite2D" parent="Fish1"]
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("1_fks4u")
+material = ExtResource("2_fef8b")
+scale = Vector2(0.12653, 0.12653)
+texture = ExtResource("2_54pp0")
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fish1"]
 position = Vector2(-2, 0)
+rotation = -1.5708
 scale = Vector2(5, 2.5)
 shape = SubResource("CapsuleShape2D_fef8b")
 disabled = true

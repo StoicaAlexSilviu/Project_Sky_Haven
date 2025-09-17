@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dybnell8fqmmv"]
+
+[ext_resource type="Script" uid="uid://dvjesm06bb5wq" path="res://Scripts/music.gd" id="1_kof7i"]
+
+[node name="Music" type="Node2D" node_paths=PackedStringArray("player")]
+script = ExtResource("1_kof7i")
+player = NodePath("AudioStreamPlayer")
+track_number_max = 5
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = 5.0
+autoplay = true
+bus = &"Music"
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

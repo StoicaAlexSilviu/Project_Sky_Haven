@@ -31,7 +31,7 @@ func _ready() -> void:
 		_base_forward = Vector2.RIGHT 
 	else:
 		_base_forward = Vector2.LEFT
-		sprite.flip_v == true
+		sprite.flip_v = true
 	# start facing left or right
 	_yaw = 0.0
 	velocity = _base_forward * max_speed * 0.7
