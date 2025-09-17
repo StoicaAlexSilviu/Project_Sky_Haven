@@ -8,19 +8,17 @@
 radius = 5.39999
 height = 76.0
 
-[node name="Fish" type="Node2D"]
-
-[node name="Fish1" type="CharacterBody2D" parent="."]
+[node name="Fish1" type="CharacterBody2D"]
 position = Vector2(2438, 488)
 script = ExtResource("1_54pp0")
 
-[node name="Sprite2D - Fish1" type="Sprite2D" parent="Fish1"]
+[node name="Sprite2D - Fish1" type="Sprite2D" parent="."]
 material = ExtResource("2_fef8b")
 scale = Vector2(0.12653, 0.12653)
 texture = ExtResource("2_54pp0")
 flip_h = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Fish1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 0)
 rotation = -1.5708
 scale = Vector2(5, 2.5)
