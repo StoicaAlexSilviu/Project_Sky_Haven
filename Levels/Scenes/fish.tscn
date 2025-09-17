@@ -10,6 +10,7 @@ height = 26.0
 [node name="Fish" type="Node2D"]
 
 [node name="Fish1" type="CharacterBody2D" parent="."]
+position = Vector2(2438, 488)
 script = ExtResource("1_54pp0")
 
 [node name="Sprite2D - Fish1" type="Sprite2D" parent="Fish1"]
@@ -21,3 +22,4 @@ flip_h = true
 position = Vector2(-2, 0)
 scale = Vector2(5, 2.5)
 shape = SubResource("CapsuleShape2D_fef8b")
+disabled = true
