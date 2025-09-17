@@ -56,7 +56,7 @@ func _apply_rope_length(new_length: float) -> void:
 
 	var rope: Object = get_node(rope_node_path)
 	var clamped: float = clampf(max(0.0, new_length), rope_min_length, rope_max_length)
-	print(new_length)
+	# print(new_length)
 	# 1) Preferred explicit setter method
 	if rope_setter_method != "" and rope.has_method(rope_setter_method):
 		rope.call(rope_setter_method, clamped)

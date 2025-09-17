@@ -1,41 +1,58 @@
 extends Node2D
-
-@export var fish_scene: PackedScene
 @export var count: int = 12
 # Size of the rectangular spawn area (centered on this node)
 @export var spawn_size: Vector2 = Vector2(1400, 800)
 @onready var notifier: VisibleOnScreenNotifier2D = $Notifier
 @onready var spawn_area_rect: ColorRect = $SpawnerArea
+@export var fish_types: Array[PackedScene] = [] 
+@export var weights: Array[float] = []   
 var _has_spawned := false
 
 func _ready() -> void:
 	_update_notifier_rect()
-	notifier.screen_entered.connect(_on_screen_entered)  # hide when the game runs
+
+func _process(_delta: float) -> void:
+	if _has_spawned:
+		return
+	# ← Poll every frame: true as soon as ANY part of notifier.rect touches the camera view
+	if notifier.is_on_screen():
+		_has_spawned = true
+		_spawn_fish_batch()
 
 func set_spawn_size(v: Vector2) -> void:
 	spawn_size = v
 	_update_notifier_rect()
-	queue_redraw()
-
-func _on_screen_entered() -> void:
-	if _has_spawned:
-		return
-	_has_spawned = true
-	_spawn_fish_batch()
 
 func _spawn_fish_batch() -> void:
-	assert(fish_scene != null, "Assign Fish.tscn to fish_scene in the Inspector.")
+	assert(fish_types.size() > 0, "Assign Fish.tscn to fish_type.")
+	if weights.size() != fish_types.size():
+		# default to equal weights if not set
+		weights = []
+		for i in fish_types.size():
+			weights.append(1.0)
 	randomize()
 
 	var rect := _global_spawn_rect()  # this is now the fish 'ocean'
 
 	for i in count:
-		var f := fish_scene.instantiate()
+		var scene := _pick_weighted(fish_types, weights)
+		var f := scene.instantiate()
 		add_child(f)
 		# place inside local rect then convert to global
 		f.global_position = to_global(_random_point_in_local_rect())
 		# tell the fish to stay inside the spawner rect
 		f.ocean_rect = rect
+
+func _pick_weighted(arr: Array[PackedScene], w: Array[float]) -> PackedScene:
+	var total := 0.0
+	for x in w: total += max(0.0, x)
+	var r := randf() * total
+	var run := 0.0
+	for i in arr.size():
+		run += max(0.0, w[i])
+		if r <= run:
+			return arr[i]
+	return arr.back()
 
 func _random_point_in_local_rect() -> Vector2:
 	var half := spawn_size * 0.5
@@ -47,16 +64,9 @@ func _global_spawn_rect() -> Rect2:
 	return Rect2(global_position - half, spawn_size)
 
 func _update_notifier_rect() -> void:
-	if not is_instance_valid(notifier):
-		return
 	var half := spawn_size * 0.5
 	notifier.rect = Rect2(-half, spawn_size)
-	
-func _update_spawn_area_rect() -> void:
-	if not is_instance_valid(spawn_area_rect):
-		return
-	spawn_area_rect.position = -spawn_size * 0.5  # center it on the parent
-	spawn_area_rect.size = spawn_size
+
 
 func _draw() -> void:
 	# Editor gizmo (also shows at runtime; remove if you want runtime hidden)
