@@ -38,7 +38,7 @@ gradient = ExtResource("5_5k7mi")
 use_hdr = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3pvp"]
-size = Vector2(105721, 10718)
+size = Vector2(841019, 10718)
 
 [node name="Water" type="Node2D"]
 script = ExtResource("1_v3pvp")
@@ -212,7 +212,6 @@ day_night_gradient = SubResource("GradientTexture1D_oir0a")
 position = Vector2(0, 1994)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/Area2D"]
-visible = false
 z_index = 92
 position = Vector2(-13.5, 5349)
 shape = SubResource("RectangleShape2D_v3pvp")
