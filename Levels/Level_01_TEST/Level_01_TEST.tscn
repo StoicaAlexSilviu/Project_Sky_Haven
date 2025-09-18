@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dq6fndlv5e6xu"]
+[gd_scene load_steps=20 format=3 uid="uid://dq6fndlv5e6xu"]
 
 [ext_resource type="PackedScene" uid="uid://eg7ou0hair3i" path="res://Levels/Scenes/Sky.tscn" id="1_02pw6"]
 [ext_resource type="PackedScene" uid="uid://c30mpb71f46pg" path="res://UI/UI.tscn" id="2_8otku"]
@@ -67,7 +67,13 @@ offset = Vector2(0, -238.37)
 script = ExtResource("6_y3gq7")
 day_night_gradient = SubResource("GradientTexture1D_wl67n")
 
-[node name="Environment" type="Sprite2D" parent="."]
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+layer = -2
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground3"]
+motion_scale = Vector2(0.5, 1)
+
+[node name="Environment" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer"]
 position = Vector2(-1572, -130)
 texture = ExtResource("8_8a5kn")
 centered = false
@@ -77,7 +83,7 @@ centered = false
 [node name="Ship" parent="." instance=ExtResource("7_kaivw")]
 position = Vector2(1927, 1933)
 
-[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target", "sprite_for_facing")]
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target", "bait", "sprite_for_facing")]
 position = Vector2(1920, 1875)
 offset = Vector2(0, -820)
 limit_bottom = 5825
@@ -85,6 +91,7 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 script = ExtResource("11_dxt10")
 target = NodePath("../Ship")
+bait = NodePath("../Ship/Ship/fishing_rod_base/Rope/RopeAnchor/BaitHook")
 lead_pixels = 500.0
 sprite_for_facing = NodePath("../Ship")
 lead_smooth = 0.5
@@ -116,9 +123,9 @@ script = ExtResource("14_5c0dn")
 spawn_size = Vector2(6000, 2000)
 fish_types = Array[PackedScene]([ExtResource("15_wl67n"), ExtResource("16_8a5kn")])
 weights = Array[float]([2.0, 1.0])
+metadata/_edit_group_ = true
 
 [node name="Notifier" type="VisibleOnScreenEnabler2D" parent="FishSpawner1"]
-position = Vector2(0, 50)
 scale = Vector2(300, 100)
 
 [node name="SpawnerArea" type="ColorRect" parent="FishSpawner1"]
@@ -139,7 +146,7 @@ size_flags_vertical = 4
 color = Color(0, 1, 1, 0.211765)
 
 [node name="FishSpawner2" type="Node2D" parent="."]
-position = Vector2(1978, 5017)
+position = Vector2(1978, 5013)
 script = ExtResource("14_5c0dn")
 count = 20
 spawn_size = Vector2(6000, 2000)
@@ -148,7 +155,6 @@ weights = Array[float]([1.0, 2.0])
 metadata/_edit_group_ = true
 
 [node name="Notifier" type="VisibleOnScreenEnabler2D" parent="FishSpawner2"]
-position = Vector2(0, 50)
 scale = Vector2(300, 100)
 
 [node name="SpawnerArea" type="ColorRect" parent="FishSpawner2"]
@@ -166,7 +172,7 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-color = Color(0, 1, 1, 0.211765)
+color = Color(0, 1, 1, 0.180392)
 
 [node name="Music" parent="." instance=ExtResource("16_ovao5")]
 

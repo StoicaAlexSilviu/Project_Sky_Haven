@@ -1,6 +1,7 @@
 extends Camera2D
 
 @export var target: Node2D
+@export var bait: Node2D
 @export var lead_pixels: float = 80.0            # How far the camera looks ahead on X (screen pixels)
 @export var sprite_for_facing: Node2D            # Optional: Sprite2D/AnimatedSprite2D to read scale.x from
 @export var lead_smooth: float = 14.0            # Higher = snappier easing, lower = smoother
@@ -19,7 +20,7 @@ func _process(delta: float) -> void:
 		return
 
 	if GlobalCamera.camera_hook:
-		target = $"../Ship/Ship/fishing_rod_base/Rope/RopeAnchor/BaitHook"
+		target = bait
 		$".".offset.y = 0
 		
 	if GlobalCamera.camera_ship:

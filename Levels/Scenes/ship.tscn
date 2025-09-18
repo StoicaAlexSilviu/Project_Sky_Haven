@@ -109,6 +109,8 @@ energy = 3.34
 texture = ExtResource("2_21nli")
 
 [node name="fishing_rod_base" type="ColorRect" parent="Ship"]
+z_index = 4
+z_as_relative = false
 offset_left = -391.0
 offset_top = -185.0
 offset_right = -383.0

@@ -17,6 +17,10 @@
 shader = ExtResource("1_ynhty")
 shader_parameter/overlay_color = Color(0.429, 0.502667, 0.65, 0.694118)
 
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_oir0a"]
+gradient = ExtResource("5_5k7mi")
+use_hdr = true
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_65rvu"]
 shader = ExtResource("1_ynhty")
 shader_parameter/overlay_color = Color(0.429, 0.502667, 0.65, 0.607843)
@@ -33,24 +37,20 @@ shader_parameter/overlay_color = Color(0.429, 0.502667, 0.65, 0.301961)
 shader = ExtResource("1_ynhty")
 shader_parameter/overlay_color = Color(0.429, 0.502667, 0.65, 0.145098)
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_oir0a"]
-gradient = ExtResource("5_5k7mi")
-use_hdr = true
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3pvp"]
 size = Vector2(841019, 10718)
 
 [node name="Water" type="Node2D"]
 script = ExtResource("1_v3pvp")
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-layer = -1
+[node name="ParallaxBackground4" type="ParallaxBackground" parent="."]
+layer = -7
 
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground4"]
 motion_scale = Vector2(0.1, 1)
 motion_mirroring = Vector2(384.09, 0)
 
-[node name="WaterLayer02" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+[node name="WaterLayer02" type="Sprite2D" parent="ParallaxBackground4/ParallaxLayer"]
 z_index = 46
 texture_repeat = 2
 material = SubResource("ShaderMaterial_5gh26")
@@ -67,11 +67,19 @@ speed_x_range = Vector2(0.1, 0.1)
 amplitude_y_range = Vector2(2, 3)
 speed_y_range = Vector2(0.2, 0.3)
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Tint" type="CanvasModulate" parent="ParallaxBackground4"]
+z_index = 4096
+script = ExtResource("4_nydue")
+day_night_gradient = SubResource("GradientTexture1D_oir0a")
+
+[node name="ParallaxBackground3" type="ParallaxBackground" parent="."]
+layer = -6
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground3"]
 motion_scale = Vector2(0.2, 1)
 motion_mirroring = Vector2(767.86, 0)
 
-[node name="WaterLayer06" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+[node name="WaterLayer06" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer2"]
 z_index = 46
 texture_repeat = 2
 material = SubResource("ShaderMaterial_65rvu")
@@ -87,11 +95,19 @@ amplitude_x_range = Vector2(10, 15)
 speed_x_range = Vector2(0.2, 0.2)
 amplitude_y_range = Vector2(3, 5)
 
-[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Tint" type="CanvasModulate" parent="ParallaxBackground3"]
+z_index = 4096
+script = ExtResource("4_nydue")
+day_night_gradient = SubResource("GradientTexture1D_oir0a")
+
+[node name="ParallaxBackground5" type="ParallaxBackground" parent="."]
+layer = -5
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground5"]
 motion_scale = Vector2(0.3, 1)
 motion_mirroring = Vector2(1152.35, 0)
 
-[node name="WaterLayer07" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+[node name="WaterLayer07" type="Sprite2D" parent="ParallaxBackground5/ParallaxLayer3"]
 z_index = 46
 texture_repeat = 2
 material = SubResource("ShaderMaterial_nydue")
@@ -107,11 +123,19 @@ amplitude_x_range = Vector2(15, 25)
 speed_x_range = Vector2(0.3, 0.3)
 amplitude_y_range = Vector2(4, 6)
 
-[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Tint" type="CanvasModulate" parent="ParallaxBackground5"]
+z_index = 4096
+script = ExtResource("4_nydue")
+day_night_gradient = SubResource("GradientTexture1D_oir0a")
+
+[node name="ParallaxBackground6" type="ParallaxBackground" parent="."]
+layer = -4
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground6"]
 motion_scale = Vector2(0.4, 1)
 motion_mirroring = Vector2(1535.88, 0)
 
-[node name="WaterLayer08" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+[node name="WaterLayer08" type="Sprite2D" parent="ParallaxBackground6/ParallaxLayer4"]
 z_index = 46
 texture_repeat = 2
 material = SubResource("ShaderMaterial_5k7mi")
@@ -127,11 +151,19 @@ amplitude_x_range = Vector2(25, 40)
 speed_x_range = Vector2(0.4, 0.4)
 amplitude_y_range = Vector2(5, 7)
 
-[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+[node name="Tint" type="CanvasModulate" parent="ParallaxBackground6"]
+z_index = 4096
+script = ExtResource("4_nydue")
+day_night_gradient = SubResource("GradientTexture1D_oir0a")
+
+[node name="ParallaxBackground7" type="ParallaxBackground" parent="."]
+layer = -3
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground7"]
 motion_scale = Vector2(0.5, 1)
 motion_mirroring = Vector2(1919.97, 0)
 
-[node name="WaterLayer09" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+[node name="WaterLayer09" type="Sprite2D" parent="ParallaxBackground7/ParallaxLayer5"]
 z_index = 46
 texture_repeat = 2
 material = SubResource("ShaderMaterial_oir0a")
@@ -146,6 +178,14 @@ script = ExtResource("3_5gh26")
 amplitude_x_range = Vector2(40, 65)
 speed_x_range = Vector2(0.5, 0.5)
 amplitude_y_range = Vector2(6, 8)
+
+[node name="Tint" type="CanvasModulate" parent="ParallaxBackground7"]
+z_index = 4096
+script = ExtResource("4_nydue")
+day_night_gradient = SubResource("GradientTexture1D_oir0a")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -1
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2(0.6, 1)
@@ -178,7 +218,8 @@ region_rect = Rect2(0, 0, 20000, 2160)
 [node name="Lev02" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6/WaterLayer10"]
 show_behind_parent = true
 z_index = 46
-position = Vector2(-410, 2343.36)
+position = Vector2(-410, 2343.33)
+scale = Vector2(1, 1.00001)
 texture = ExtResource("5_v3pvp")
 centered = false
 region_enabled = true
@@ -187,7 +228,8 @@ region_rect = Rect2(0, 0, 20000, 2160)
 [node name="Lev03" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6/WaterLayer10"]
 show_behind_parent = true
 z_index = 46
-position = Vector2(-410, 4503.36)
+position = Vector2(-410, 4503.33)
+scale = Vector2(1, 1.00001)
 texture = ExtResource("6_ne8an")
 centered = false
 region_enabled = true
@@ -212,12 +254,14 @@ day_night_gradient = SubResource("GradientTexture1D_oir0a")
 position = Vector2(0, 1994)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ParallaxBackground/Area2D"]
+visible = false
 z_index = 92
 position = Vector2(-13.5, 5349)
 shape = SubResource("RectangleShape2D_v3pvp")
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 layer = 2
+visible = false
 
 [node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground2"]
 motion_scale = Vector2(0.7, 1)
