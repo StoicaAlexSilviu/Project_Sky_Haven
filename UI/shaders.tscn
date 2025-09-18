@@ -1,33 +1,34 @@
-[gd_scene load_steps=7 format=3 uid="uid://7eqqoxhldk4p"]
+[gd_scene load_steps=8 format=3 uid="uid://7eqqoxhldk4p"]
 
+[ext_resource type="Texture2D" uid="uid://cdtgp2yg0ikw" path="res://Assets/Sprites/Layer 17.png" id="1_q761g"]
 [ext_resource type="Shader" uid="uid://cj8ugtyd4rpra" path="res://UI/shaders/Abberation.gdshader" id="1_qr508"]
 [ext_resource type="Shader" uid="uid://c3sp4m5xgmenr" path="res://UI/shaders/Blur.gdshader" id="2_b8tu1"]
 [ext_resource type="Shader" uid="uid://bgat0ftbagj7y" path="res://UI/shaders/Glow.gdshader" id="3_j6ura"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q761g"]
 shader = ExtResource("3_j6ura")
-shader_parameter/threshold = 0.912
+shader_parameter/threshold = 1.0
 shader_parameter/soft_knee = 0.5
-shader_parameter/radius_px = 16.0
-shader_parameter/strength = 1.099
+shader_parameter/radius_px = 3.449
+shader_parameter/strength = 0.0
 shader_parameter/tint = Color(1, 0.831, 0.61, 1)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_j6ura"]
 shader = ExtResource("2_b8tu1")
-shader_parameter/blur_radius_px = 3.435
-shader_parameter/edge_width = 0.095
-shader_parameter/edge_softness = 0.275
-shader_parameter/intensity = 0.63
+shader_parameter/blur_radius_px = 2.13
+shader_parameter/edge_width = 0.035
+shader_parameter/edge_softness = 0.1
+shader_parameter/intensity = 1.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_b8tu1"]
 shader = ExtResource("1_qr508")
 shader_parameter/center = Vector2(0.5, 0.5)
 shader_parameter/inner = 0.0
-shader_parameter/radius = 0.381
-shader_parameter/strength_px = 0.746
+shader_parameter/radius = 1.076
+shader_parameter/strength_px = 2.322
 shader_parameter/green_shift = 0.0
 shader_parameter/early_out = true
-shader_parameter/grain_amount = 0.04
+shader_parameter/grain_amount = 0.002
 shader_parameter/grain_size_px = 0.5
 shader_parameter/grain_contrast = 0.5
 shader_parameter/grain_seed = 303.867
@@ -40,6 +41,11 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Layer17" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1916, 1089)
+texture = ExtResource("1_q761g")
 
 [node name="CanvasLayer3" type="CanvasLayer" parent="."]
 layer = 125

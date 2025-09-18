@@ -66,6 +66,13 @@ script = ExtResource("3_m13lc")
 amplitude_x_range = Vector2(0, 0)
 speed_x_range = Vector2(0, 0)
 
+[node name="Sun" type="Sprite2D" parent="Ship"]
+modulate = Color(1, 0.583333, 0.5, 0.34902)
+show_behind_parent = true
+position = Vector2(-186, -222)
+scale = Vector2(2.14432, 2.09978)
+texture = ExtResource("2_21nli")
+
 [node name="PointLight2D" type="PointLight2D" parent="Ship"]
 position = Vector2(-168, -247)
 scale = Vector2(2.14432, 2.09978)

@@ -78,6 +78,9 @@ position = Vector2(-1572, -130)
 texture = ExtResource("8_8a5kn")
 centered = false
 
+[node name="CanvasModulate" type="CanvasModulate" parent="ParallaxBackground3"]
+script = ExtResource("6_si2lg")
+
 [node name="Water" parent="." instance=ExtResource("6_dxt10")]
 
 [node name="Ship" parent="." instance=ExtResource("7_kaivw")]
@@ -92,9 +95,10 @@ editor_draw_drag_margin = true
 script = ExtResource("11_dxt10")
 target = NodePath("../Ship")
 bait = NodePath("../Ship/Ship/fishing_rod_base/Rope/RopeAnchor/BaitHook")
-lead_pixels = 500.0
+lead_pixels = 250.0
 sprite_for_facing = NodePath("../Ship")
 lead_smooth = 0.5
+idle_lead_delay = 0.5
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 script = ExtResource("6_si2lg")
