@@ -13,11 +13,12 @@
 content_margin_top = 222.0
 content_margin_right = 17.0
 
-[node name="Ui" type="Control" node_paths=PackedStringArray("time_label")]
+[node name="Ui" type="Control" node_paths=PackedStringArray("time_label", "minigame")]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_dhe1o")
 time_label = NodePath("CanvasLayer/TimeLabel")
+minigame = NodePath("CanvasLayer/Minigame")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 126
@@ -129,20 +130,11 @@ grow_vertical = 2
 visible = false
 layout_mode = 2
 
-[node name="minigame_scene" type="CenterContainer" parent="CanvasLayer"]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -5.0
-offset_right = -2805.0
-offset_bottom = 5.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_vertical = 3
-
-[node name="Minigame" parent="CanvasLayer/minigame_scene" instance=ExtResource("6_jqf55")]
-layout_mode = 2
+[node name="Minigame" parent="CanvasLayer" instance=ExtResource("6_jqf55")]
+offset_left = 520.0
+offset_top = 1127.0
+offset_right = 520.0
+offset_bottom = 1127.0
 
 [node name="slider" type="CenterContainer" parent="CanvasLayer"]
 anchors_preset = 15

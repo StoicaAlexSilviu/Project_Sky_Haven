@@ -4,7 +4,7 @@ var water_vis := true
 var ship_moves := false
 var ship_can_move := true
 var fish_catch := 0
-
+var fish_game := true
 
 func _ready() -> void:
 	if OS.has_feature("pc"):
