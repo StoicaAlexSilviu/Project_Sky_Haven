@@ -9,7 +9,6 @@ extends Sprite2D
 @export var facing_offset_deg: float = 0.0
 
 var _angle_rad: float = 0.0
-var _accept_cooldown: bool = false  # <- NEW: prevents re-triggers for 0.5s
 
 func _ready() -> void:
 	_angle_rad = deg_to_rad(start_angle_deg)
@@ -27,22 +26,6 @@ func _process(delta: float) -> void:
 	_angle_rad = wrapf(_angle_rad + dir * deg_to_rad(angular_speed_deg) * delta, -TAU, TAU)
 	_snap_to_circle()
 	_face_center()
-
-func _input(event: InputEvent) -> void:
-	if Engine.is_editor_hint():
-		return
-	if event.is_action_pressed("ui_accept") and Global.catch and !_accept_cooldown:
-		# Count immediately, then pause & start cooldown
-		Global.fish_difficulty += 1
-		_pause_with_cooldown(0.5)
-
-func _pause_with_cooldown(secs: float) -> void:
-	_accept_cooldown = true
-	var prev_paused := paused
-	paused = true
-	await get_tree().create_timer(secs).timeout
-	paused = prev_paused
-	_accept_cooldown = false
 
 func set_start_angle(v: float) -> void:
 	start_angle_deg = v

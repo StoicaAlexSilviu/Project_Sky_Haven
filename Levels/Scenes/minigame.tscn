@@ -1,13 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://dtmlu32foucsc"]
+[gd_scene load_steps=12 format=3 uid="uid://dtmlu32foucsc"]
 
 [ext_resource type="Texture2D" uid="uid://cdg4a2ci64jd8" path="res://Assets/Sprites/bg_minigame.png" id="1_ji4qr"]
 [ext_resource type="Script" uid="uid://cihy7yckbd8a3" path="res://Scripts/minigame.gd" id="1_jqtna"]
 [ext_resource type="Texture2D" uid="uid://b6owjvp2yp0jh" path="res://Assets/Sprites/minigame_bg.png" id="1_pp5ar"]
 [ext_resource type="Texture2D" uid="uid://cffmnjm8q3d1" path="res://Assets/Sprites/dots_1.png" id="5_362ht"]
-[ext_resource type="PackedScene" uid="uid://bgqp24wnu3h2c" path="res://Levels/Scenes/game_1.tscn" id="5_ehs7h"]
 [ext_resource type="Texture2D" uid="uid://bjhfps8y5e6p5" path="res://Assets/Sprites/dots_2.png" id="6_jgvtm"]
 [ext_resource type="PackedScene" uid="uid://cm1mm8r1x4rh3" path="res://Levels/Scenes/game_2.tscn" id="6_mitmw"]
-[ext_resource type="PackedScene" uid="uid://8fjhpn6ujnyi" path="res://Levels/Scenes/game_3.tscn" id="7_lfe0l"]
 [ext_resource type="Texture2D" uid="uid://dk7oic8ffheid" path="res://Assets/Sprites/fish_mini.png" id="8_jqtna"]
 [ext_resource type="Texture2D" uid="uid://dhjphgcldic6g" path="res://Assets/Sprites/fish_slot_catch.png" id="10_jgvtm"]
 [ext_resource type="Script" uid="uid://ceo5d8yfim804" path="res://Scripts/minigame_indiator.gd" id="11_ehs7h"]
@@ -23,10 +21,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jqtna")
-game_01 = ExtResource("5_ehs7h")
-game_02 = ExtResource("6_mitmw")
-game_03 = ExtResource("7_lfe0l")
-spawn_position = Vector2(587, 1249.5)
 
 [node name="MinigameBg" type="Sprite2D" parent="."]
 position = Vector2(587, 1085)
@@ -75,11 +69,12 @@ facing_offset_deg = 90.0
 [node name="Node2D" type="Node2D" parent="MinigameBg/Sprite2D/Sprite2D2"]
 
 [node name="Area2D" type="Area2D" parent="MinigameBg/Sprite2D/Sprite2D2"]
-collision_layer = 4
-collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="MinigameBg/Sprite2D/Sprite2D2/Area2D"]
 shape = SubResource("CircleShape2D_mitmw")
+
+[node name="Game2" parent="MinigameBg" instance=ExtResource("6_mitmw")]
+position = Vector2(0, 164.5)
 
 [connection signal="area_entered" from="MinigameBg/Sprite2D/Sprite2D2/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="MinigameBg/Sprite2D/Sprite2D2/Area2D" to="." method="_on_area_2d_area_exited"]

@@ -19,6 +19,7 @@ anchors_preset = 0
 script = ExtResource("1_dhe1o")
 time_label = NodePath("CanvasLayer/TimeLabel")
 minigame_scene = ExtResource("6_jqf55")
+toggle_action = &"minigame"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = 126
@@ -43,6 +44,16 @@ texture = ExtResource("3_f1fl4")
 position = Vector2(63, 48)
 rotation = 1.5708
 texture = ExtResource("4_jqf55")
+
+[node name="Coins" type="Label" parent="CanvasLayer"]
+offset_left = 41.0
+offset_top = 203.0
+offset_right = 183.0
+offset_bottom = 318.0
+theme_override_colors/font_color = Color(0.814668, 0.647608, 0, 1)
+theme_override_fonts/font = ExtResource("1_6dd3c")
+theme_override_font_sizes/font_size = 80
+text = "Coins : 100"
 
 [node name="CenterContainer4" type="CenterContainer" parent="CanvasLayer"]
 anchors_preset = 15
@@ -147,7 +158,6 @@ layout_mode = 2
 theme_override_styles/slider = SubResource("StyleBoxEmpty_byuxr")
 max_value = 1.0
 step = 0.001
-value = 1.0
 tick_count = 10
 ticks_on_borders = true
 script = ExtResource("7_byuxr")
