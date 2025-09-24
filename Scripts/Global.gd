@@ -1,6 +1,6 @@
 extends Node
 
-@onready var water_vis := true
+@onready var water_vis := false
 @onready var ship_moves := false
 @onready var ship_can_move := true
 @onready var fish_catch := 0
@@ -22,5 +22,5 @@ func _process(_delta: float) -> void:
 		fish_game = false
 
 #Below is used to trigger the game when fish enter colision
-func on_trigger(trigger: Area2D, body: CharacterBody2D) -> void:
+func on_trigger(_trigger: Area2D, _body: CharacterBody2D) -> void:
 	fish_game = true

@@ -19,11 +19,11 @@ func _process(delta: float) -> void:
 	if not target:
 		return
 
-	if GlobalCamera.camera_hook:
+	if GlobalCamera.camera_hook and !GlobalCamera.camera_ship:
 		target = bait
 		$".".offset.y = 0
 		
-	if GlobalCamera.camera_ship:
+	if GlobalCamera.camera_ship and !GlobalCamera.camera_hook:
 		target = $"../Ship"
 		$".".offset.y = -820.0
 	
