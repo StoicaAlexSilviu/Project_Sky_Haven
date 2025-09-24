@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dq6fndlv5e6xu"]
+[gd_scene load_steps=21 format=3 uid="uid://dq6fndlv5e6xu"]
 
 [ext_resource type="PackedScene" uid="uid://eg7ou0hair3i" path="res://Levels/Scenes/Sky.tscn" id="1_02pw6"]
 [ext_resource type="PackedScene" uid="uid://c30mpb71f46pg" path="res://UI/UI.tscn" id="2_8otku"]
@@ -14,7 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://cbed8uukxhvwf" path="res://Assets/Sprites/environment.png" id="8_8a5kn"]
 [ext_resource type="Texture2D" uid="uid://ddr1a6ksadj8s" path="res://Assets/Sprites/base_clouds.png" id="10_y3gq7"]
 [ext_resource type="Script" uid="uid://db5qu73i0gbnu" path="res://Scripts/camera.gd" id="11_dxt10"]
-[ext_resource type="Script" uid="uid://dwup8voh0xlmh" path="res://Levels/Level_01_TEST/fishes.gd" id="14_5c0dn"]
+[ext_resource type="Script" uid="uid://beyjedg7cc40e" path="res://Scripts/area_2d_bait.gd" id="12_vqja4"]
+[ext_resource type="Script" uid="uid://dwup8voh0xlmh" path="res://Scripts/fishes.gd" id="14_5c0dn"]
 [ext_resource type="PackedScene" uid="uid://blwwmh7m47d7l" path="res://Levels/Scenes/fish.tscn" id="15_wl67n"]
 [ext_resource type="PackedScene" uid="uid://7udwfygsg60o" path="res://Levels/Scenes/fish_type2.tscn" id="16_8a5kn"]
 [ext_resource type="PackedScene" uid="uid://dybnell8fqmmv" path="res://Levels/Scenes/Music.tscn" id="16_ovao5"]
@@ -86,6 +87,11 @@ script = ExtResource("6_si2lg")
 [node name="Ship" parent="." instance=ExtResource("7_kaivw")]
 position = Vector2(1927, 1933)
 
+[node name="Area2DBait" parent="Ship/Ship/fishing_rod_base/Rope/RopeAnchor/BaitHook" index="2"]
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("12_vqja4")
+
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target", "bait", "sprite_for_facing")]
 position = Vector2(1920, 1875)
 offset = Vector2(0, -820)
@@ -104,6 +110,10 @@ idle_lead_delay = 0.5
 script = ExtResource("6_si2lg")
 
 [node name="Ui" parent="." instance=ExtResource("2_8otku")]
+offset_left = 337.0
+offset_top = -246.0
+offset_right = 337.0
+offset_bottom = -246.0
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 layer = 100

@@ -34,6 +34,8 @@ func _ready() -> void:
 		_current_volume_db = silent_volume_db
 		_set_player_volume(_current_volume_db)
 
+
+
 func _process(delta: float) -> void:
 	var input_dir := 0.0
 	if Input.is_action_pressed("ui_left"):  input_dir -= 1.0
