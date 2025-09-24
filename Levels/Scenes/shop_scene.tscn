@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgdjsr2m66kkg"]
+
+[ext_resource type="Texture2D" uid="uid://djoyl314alkmu" path="res://Assets/Sprites/concept board 0001.png" id="1_vah0d"]
+
+[node name="Shop_scene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ConceptBoard0001" type="Sprite2D" parent="."]
+texture = ExtResource("1_vah0d")
+centered = false

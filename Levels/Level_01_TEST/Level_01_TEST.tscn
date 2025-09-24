@@ -1,7 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://dq6fndlv5e6xu"]
+[gd_scene load_steps=20 format=3 uid="uid://dq6fndlv5e6xu"]
 
 [ext_resource type="PackedScene" uid="uid://eg7ou0hair3i" path="res://Levels/Scenes/Sky.tscn" id="1_02pw6"]
-[ext_resource type="PackedScene" uid="uid://c30mpb71f46pg" path="res://UI/UI.tscn" id="2_8otku"]
 [ext_resource type="Texture2D" uid="uid://1h5d20bxouuv" path="res://Assets/Sprites/cloud_01.png" id="2_kaivw"]
 [ext_resource type="Texture2D" uid="uid://div7gd1snikww" path="res://Assets/Sprites/cloud_02.png" id="3_dxt10"]
 [ext_resource type="Texture2D" uid="uid://fk1o1xbjmj0p" path="res://Assets/Sprites/foreground_01.png" id="3_ti473"]
@@ -108,12 +107,6 @@ idle_lead_delay = 0.5
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 script = ExtResource("6_si2lg")
-
-[node name="Ui" parent="." instance=ExtResource("2_8otku")]
-offset_left = 337.0
-offset_top = -246.0
-offset_right = 337.0
-offset_bottom = -246.0
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="."]
 layer = 100

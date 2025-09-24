@@ -22,6 +22,7 @@ GlobalCamera="*res://Scripts/GlobalCamera.gd"
 Clock="*res://UI/Clock.gd"
 SkyTint="*res://Scripts/SkyTint.gd"
 Shaders="*res://UI/shaders.tscn"
+Ui="*res://UI/UI.tscn"
 
 [display]
 

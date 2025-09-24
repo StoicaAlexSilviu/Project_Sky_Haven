@@ -34,9 +34,11 @@ func _process(delta: float) -> void:
 	
 	if inc and not dec and !Global.ship_moves and !Global.fish_game:
 		_rope_len += rope_change_speed * delta
+	
 		#GlobalCamera.camera_hook = true
 	elif dec and not inc:
 		_rope_len -= rope_change_speed * delta
+		
 	# if both or neither are pressed, do nothing
 
 	_rope_len = clampf(_rope_len, rope_min_length, rope_max_length)
