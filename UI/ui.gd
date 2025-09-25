@@ -18,13 +18,16 @@ func _input(event: InputEvent) -> void:
 	
 	if event is InputEventJoypadMotion:
 		return
-	$CanvasLayer/Coins.text = str("Coins : ", Global.coins)
+	
 	
 	if Input.is_action_just_pressed(toggle_action):
 		Global.fish_game = true
 		
 
 func _process(_delta: float) -> void:
+	
+	$CanvasLayer/Coins.text = str("Coins : ", Global.coins)
+	
 	if Global.fish_game and minigame_instance == null:
 		_spawn_minigame()
 	

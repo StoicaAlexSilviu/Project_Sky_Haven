@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://bgdjsr2m66kkg"]
+[gd_scene load_steps=4 format=3 uid="uid://bgdjsr2m66kkg"]
 
+[ext_resource type="Script" uid="uid://bdhjbjh8wl4gm" path="res://Scripts/shop_scene.gd" id="1_nsf00"]
 [ext_resource type="Texture2D" uid="uid://djoyl314alkmu" path="res://Assets/Sprites/concept board 0001.png" id="1_vah0d"]
+[ext_resource type="FontFile" uid="uid://x6thkh2jxesg" path="res://Assets/Fonts/MouseMemoirs-Regular.ttf" id="3_etllu"]
 
 [node name="Shop_scene" type="Control"]
 layout_mode = 3
@@ -9,7 +11,50 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_nsf00")
 
 [node name="ConceptBoard0001" type="Sprite2D" parent="."]
 texture = ExtResource("1_vah0d")
 centered = false
+
+[node name="sell" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2340.0
+offset_top = 610.0
+offset_right = -1311.0
+offset_bottom = -1419.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../exit")
+focus_neighbor_bottom = NodePath("../exit")
+theme_override_colors/font_color = Color(0.721569, 0.705882, 0.615686, 1)
+theme_override_fonts/font = ExtResource("3_etllu")
+theme_override_font_sizes/font_size = 106
+text = "Sell >>"
+flat = true
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2303.0
+offset_top = 831.0
+offset_right = -1348.0
+offset_bottom = -1198.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../sell")
+focus_neighbor_bottom = NodePath("../sell")
+theme_override_colors/font_color = Color(0.71, 0.25773, 0.0142, 1)
+theme_override_fonts/font = ExtResource("3_etllu")
+theme_override_font_sizes/font_size = 106
+text = "Exit"
+flat = true
+
+[connection signal="pressed" from="sell" to="." method="_on_sell_pressed"]
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]

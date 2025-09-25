@@ -13,6 +13,7 @@ var _idle_timer: float = 0.0                     # Time since last left/right in
 var _lead_active: bool = false                   # Lead starts inactive until movement input
 
 func _ready() -> void:
+	target = $"../Ship"
 	_base_offset = offset
 
 func _process(delta: float) -> void:

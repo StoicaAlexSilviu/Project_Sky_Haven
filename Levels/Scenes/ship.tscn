@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c62s7v5e184oj"]
+[gd_scene load_steps=15 format=3 uid="uid://c62s7v5e184oj"]
 
 [ext_resource type="Texture2D" uid="uid://bhseiff8a8byj" path="res://Assets/Sprites/ship.png" id="1_58rqr"]
 [ext_resource type="Script" uid="uid://cmaw3ljvf3lwu" path="res://Scripts/ship.gd" id="1_t8iee"]
@@ -13,7 +13,7 @@
 radius = 30.1353
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7xw5y"]
-radius = 458.283
+radius = 226.137
 
 [sub_resource type="Animation" id="Animation_sivrg"]
 length = 0.001
@@ -51,6 +51,9 @@ _data = {
 &"RESET": SubResource("Animation_sivrg"),
 &"Wave": SubResource("Animation_m13lc")
 }
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ttq10"]
+radius = 140.032
 
 [node name="Ship" type="Node2D" node_paths=PackedStringArray("sprite", "move_sound")]
 z_index = 45
@@ -169,6 +172,8 @@ color = Color(1, 0, 0, 1)
 
 [node name="Area2D" type="Area2D" parent="Ship/fishing_rod_base/Rope/RopeAnchor/BaitHook"]
 position = Vector2(20, 20)
+collision_layer = 256
+collision_mask = 256
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ship/fishing_rod_base/Rope/RopeAnchor/BaitHook/Area2D"]
 shape = SubResource("CircleShape2D_k83w8")
@@ -203,5 +208,14 @@ volume_db = 10.0
 max_distance = 3840.0
 panning_strength = 2.34
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ttq10")
+
 [connection signal="area_entered" from="Ship/fishing_rod_base/Rope/RopeAnchor/BaitHook/Area2D" to="Ship/fishing_rod_base" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Ship/fishing_rod_base/Rope/RopeAnchor/BaitHook/Area2D" to="Ship/fishing_rod_base" method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

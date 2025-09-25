@@ -16,6 +16,7 @@ content_margin_right = 17.0
 [node name="Ui" type="Control" node_paths=PackedStringArray("time_label")]
 layout_mode = 3
 anchors_preset = 0
+mouse_filter = 2
 script = ExtResource("1_dhe1o")
 time_label = NodePath("CanvasLayer/TimeLabel")
 minigame_scene = ExtResource("6_jqf55")
@@ -53,7 +54,6 @@ offset_bottom = 318.0
 theme_override_colors/font_color = Color(0.814668, 0.647608, 0, 1)
 theme_override_fonts/font = ExtResource("1_6dd3c")
 theme_override_font_sizes/font_size = 80
-text = "Coins : 100"
 
 [node name="CenterContainer4" type="CenterContainer" parent="CanvasLayer"]
 anchors_preset = 15
@@ -136,6 +136,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="Minigame" parent="CanvasLayer/CenterContainer" instance=ExtResource("6_jqf55")]
 visible = false

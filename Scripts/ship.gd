@@ -111,3 +111,13 @@ func _set_player_volume(db: float) -> void:
 		(move_sound as AudioStreamPlayer2D).volume_db = db
 	elif move_sound is AudioStreamPlayer:
 		(move_sound as AudioStreamPlayer).volume_db = db
+
+
+func _on_area_2d_area_entered(_area: Area2D) -> void:
+	Global.shop_entered = true
+	print("entered")
+
+
+func _on_area_2d_area_exited(_area: Area2D) -> void:
+	Global.shop_entered = false
+	print("exited")
