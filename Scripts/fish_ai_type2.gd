@@ -29,7 +29,6 @@ var _cooldown_left: float = 0.0
 func _ready() -> void:
 	# Optional: add the character to a group so minimage triggers can filter (e.g., only "player").
 	add_to_group(&"fish")
-	_add_exceptions_to_existing_players()
 	randomize()
 	ocean_rect = Rect2(get_viewport_rect().position*120/100, get_viewport_rect().size*120/100)
 	if randf()<0.5:
@@ -104,7 +103,7 @@ func _handle_edges() -> void:
 		_yaw = -abs(_yaw) * 0.5  # tilt upward a bit
 		velocity.y = -abs(velocity.y)
 		_cooldown_left = flip_cooldown
-
+		
 func _add_exceptions_to_existing_players():
 	for node in get_tree().get_nodes_in_group("fish"):
 		if node != self and node is CharacterBody2D:

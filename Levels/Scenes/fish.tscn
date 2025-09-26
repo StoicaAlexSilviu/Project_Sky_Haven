@@ -12,6 +12,7 @@ height = 76.0
 process_mode = 3
 position = Vector2(2438, 488)
 script = ExtResource("1_54pp0")
+chance_to_catch = 0.4
 
 [node name="Sprite2D - Fish1" type="Sprite2D" parent="."]
 material = ExtResource("2_fef8b")

@@ -8,6 +8,12 @@ extends Node
 @onready var input_blocked = false
 @onready var coins = 0
 @onready var shop_entered = false
+#this helps me identify the fish that will need to get despawned
+@onready var fish_is_in_minigame = false
+@onready var fish_to_be_destroyed
+#this helps me give a chance for the fish to catch the bait
+@onready var chace_to_catch
+
 
 var load_global_script
 var caught_this_round := false  # new flag
@@ -27,7 +33,6 @@ func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("ui_accept") and shop_entered:
 		get_tree().change_scene_to_file("res://Levels/Scenes/shop_scene.tscn")
 	
-
 #Below is used to trigger the game when fish enter colision
 func on_trigger(_trigger: Area2D, _body: CharacterBody2D) -> void:
 	fish_game = true

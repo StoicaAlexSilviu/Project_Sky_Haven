@@ -6,6 +6,7 @@ extends Node2D
 @onready var spawn_area_rect: ColorRect = $SpawnerArea
 @export var fish_types: Array[PackedScene] = [] 
 @export var weights: Array[float] = []   
+
 var _has_spawned := false
 
 func _ready() -> void:

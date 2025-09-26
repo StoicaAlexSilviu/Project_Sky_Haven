@@ -6,4 +6,4 @@ func _process(_delta: float) -> void:
 		$ParallaxBackground2.visible = true
 	else:
 		$ParallaxBackground2.visible = false
-	print(Global.water_vis)
+	#print(Global.water_vis)
