@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://dq6fndlv5e6xu"]
+[gd_scene load_steps=23 format=3 uid="uid://dq6fndlv5e6xu"]
 
 [ext_resource type="PackedScene" uid="uid://eg7ou0hair3i" path="res://Levels/Scenes/Sky.tscn" id="1_02pw6"]
 [ext_resource type="Texture2D" uid="uid://1h5d20bxouuv" path="res://Assets/Sprites/cloud_01.png" id="2_kaivw"]
@@ -20,7 +20,6 @@
 [ext_resource type="Script" uid="uid://dwup8voh0xlmh" path="res://Scripts/fishes.gd" id="14_5c0dn"]
 [ext_resource type="PackedScene" uid="uid://blwwmh7m47d7l" path="res://Levels/Scenes/fish.tscn" id="15_wl67n"]
 [ext_resource type="PackedScene" uid="uid://7udwfygsg60o" path="res://Levels/Scenes/fish_type2.tscn" id="16_8a5kn"]
-[ext_resource type="PackedScene" uid="uid://dybnell8fqmmv" path="res://Levels/Scenes/Music.tscn" id="16_ovao5"]
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_wl67n"]
 gradient = ExtResource("7_5c0dn")
@@ -127,7 +126,7 @@ collision_mask = 1
 script = ExtResource("12_vqja4")
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target", "bait", "sprite_for_facing")]
-position = Vector2(1920, 1875)
+position = Vector2(1920, 1900)
 offset = Vector2(0, -820)
 limit_bottom = 5825
 editor_draw_limits = true
@@ -171,6 +170,7 @@ metadata/_edit_group_ = true
 scale = Vector2(300, 100)
 
 [node name="SpawnerArea" type="ColorRect" parent="FishSpawner1"]
+visible = false
 custom_minimum_size = Vector2(6000, 2000)
 anchors_preset = 8
 anchor_left = 0.5
@@ -200,6 +200,7 @@ metadata/_edit_group_ = true
 scale = Vector2(300, 100)
 
 [node name="SpawnerArea" type="ColorRect" parent="FishSpawner2"]
+visible = false
 custom_minimum_size = Vector2(6000, 2000)
 anchors_preset = 8
 anchor_left = 0.5
@@ -215,7 +216,5 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 color = Color(0, 1, 1, 0.180392)
-
-[node name="Music" parent="." instance=ExtResource("16_ovao5")]
 
 [editable path="Ship"]

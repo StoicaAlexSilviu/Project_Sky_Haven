@@ -71,7 +71,7 @@ func _update_notifier_rect() -> void:
 
 func _draw() -> void:
 	# Editor gizmo (also shows at runtime; remove if you want runtime hidden)
-	var half := spawn_size * 0.5
+	var half := spawn_size * 0.0
 	var r := Rect2(-half, spawn_size)
-	draw_rect(r, Color(0.2, 0.7, 1.0, 0.08), true)
-	draw_rect(r, Color(0.2, 0.7, 1.0, 0.9), false, 2.0)
+	draw_rect(r, Color(0.0, 0.0, 0.0, 0.0), true)
+	draw_rect(r, Color(0.0, 0.0, 0.0, 0.0), false, 0.0)

@@ -29,6 +29,7 @@ var _cooldown_left: float = 0.0
 func _ready() -> void:
 	# Optional: add the character to a group so minimage triggers can filter (e.g., only "player").
 	add_to_group(&"fish")
+	_add_exceptions_to_existing_players()
 	randomize()
 	ocean_rect = Rect2(get_viewport_rect().position*120/100, get_viewport_rect().size*120/100)
 	if randf()<0.5:

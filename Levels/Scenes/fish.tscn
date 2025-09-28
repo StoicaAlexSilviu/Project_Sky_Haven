@@ -10,7 +10,6 @@ height = 76.0
 
 [node name="Fish1" type="CharacterBody2D"]
 process_mode = 3
-position = Vector2(2438, 488)
 script = ExtResource("1_54pp0")
 chance_to_catch = 0.4
 

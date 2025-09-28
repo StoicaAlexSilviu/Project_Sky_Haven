@@ -23,6 +23,7 @@ Clock="*res://UI/Clock.gd"
 SkyTint="*res://Scripts/SkyTint.gd"
 Shaders="*res://UI/shaders.tscn"
 Ui="*res://UI/UI.tscn"
+Music="*res://Levels/Scenes/Music.tscn"
 
 [display]
 
