@@ -8,6 +8,10 @@ extends Node
 @onready var input_blocked = false
 @onready var coins = 0
 @onready var shop_entered = false
+@onready var indicator_in = false
+@onready var minigame_mistakes = 0
+@onready var minigame_hits = 0
+@onready var minigame_can_jump = false
 #this helps me identify the fish that will need to get despawned
 @onready var fish_is_in_minigame = false
 @onready var fish_to_be_destroyed

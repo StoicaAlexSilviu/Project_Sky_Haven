@@ -1,18 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://dtmlu32foucsc"]
+[gd_scene load_steps=8 format=3 uid="uid://dtmlu32foucsc"]
 
-[ext_resource type="Texture2D" uid="uid://cdg4a2ci64jd8" path="res://Assets/Sprites/bg_minigame.png" id="1_ji4qr"]
 [ext_resource type="Script" uid="uid://cihy7yckbd8a3" path="res://Scripts/minigame.gd" id="1_jqtna"]
 [ext_resource type="Texture2D" uid="uid://b6owjvp2yp0jh" path="res://Assets/Sprites/minigame_bg.png" id="1_pp5ar"]
-[ext_resource type="Texture2D" uid="uid://cffmnjm8q3d1" path="res://Assets/Sprites/dots_1.png" id="5_362ht"]
-[ext_resource type="Texture2D" uid="uid://bjhfps8y5e6p5" path="res://Assets/Sprites/dots_2.png" id="6_jgvtm"]
-[ext_resource type="PackedScene" uid="uid://cm1mm8r1x4rh3" path="res://Levels/Scenes/game_2.tscn" id="6_mitmw"]
-[ext_resource type="Texture2D" uid="uid://dk7oic8ffheid" path="res://Assets/Sprites/fish_mini.png" id="8_jqtna"]
-[ext_resource type="Texture2D" uid="uid://dhjphgcldic6g" path="res://Assets/Sprites/fish_slot_catch.png" id="10_jgvtm"]
-[ext_resource type="Script" uid="uid://ceo5d8yfim804" path="res://Scripts/minigame_indiator.gd" id="11_ehs7h"]
-[ext_resource type="Script" uid="uid://o8irusu5v744" path="res://Scripts/minigame_line_2d.gd" id="12_ehs7h"]
+[ext_resource type="FontFile" uid="uid://x6thkh2jxesg" path="res://Assets/Fonts/MouseMemoirs-Regular.ttf" id="4_imxhp"]
+[ext_resource type="Script" uid="uid://13scrrm2u1m5" path="res://Scripts/counter.gd" id="5_xryb0"]
+[ext_resource type="Script" uid="uid://b7u7rwt3w23ye" path="res://Scripts/mistakes.gd" id="6_ji4qr"]
+[ext_resource type="PackedScene" uid="uid://cm1mm8r1x4rh3" path="res://Levels/Scenes/game.tscn" id="6_mitmw"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_mitmw"]
-radius = 42.0598
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xryb0"]
 
 [node name="Minigame" type="CenterContainer"]
 anchors_preset = 15
@@ -22,60 +17,40 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_jqtna")
+mistakes = 2
+hits = 3
 
 [node name="MinigameBg" type="Sprite2D" parent="."]
 position = Vector2(587, 1085)
 texture = ExtResource("1_pp5ar")
 
-[node name="Sprite2D" type="Sprite2D" parent="MinigameBg"]
-position = Vector2(0, 164.5)
-texture = ExtResource("1_ji4qr")
-
-[node name="FishMini" type="Sprite2D" parent="MinigameBg/Sprite2D"]
-position = Vector2(6, 0)
-texture = ExtResource("8_jqtna")
-
-[node name="Dots1" type="Sprite2D" parent="MinigameBg/Sprite2D"]
-z_index = 1
-texture = ExtResource("5_362ht")
-
-[node name="Dots2" type="Sprite2D" parent="MinigameBg/Sprite2D"]
-z_index = 1
-texture = ExtResource("6_jgvtm")
-
-[node name="Line2D" type="Line2D" parent="MinigameBg/Sprite2D"]
-z_index = 4096
-z_as_relative = false
-scale = Vector2(0.516129, 0.516129)
-points = PackedVector2Array(283.54, 0, 283.198, 13.9126, 282.175, 27.7918, 280.471, 41.604, 278.092, 55.3159, 275.043, 68.8946, 271.331, 82.3073, 266.965, 95.5218, 261.957, 108.506, 256.317, 121.229, 250.06, 133.66, 243.2, 145.769, 235.755, 157.526, 227.741, 168.905, 219.179, 179.876, 210.089, 190.414, 200.493, 200.493, 190.414, 210.089, 179.876, 219.179, 168.905, 227.741, 157.526, 235.755, 145.769, 243.2, 133.66, 250.06, 121.229, 256.317, 108.506, 261.957, 95.5218, 266.965, 82.3073, 271.331, 68.8946, 275.043, 55.3159, 278.092, 41.604, 280.471, 27.7918, 282.175, 13.9126, 283.198, 1.73612e-14, 283.54, -13.9126, 283.198, -27.7918, 282.175, -41.604, 280.471, -55.3159, 278.092, -68.8946, 275.043, -82.3073, 271.331, -95.5218, 266.965, -108.506, 261.957, -121.229, 256.317, -133.66, 250.06, -145.769, 243.2, -157.526, 235.755, -168.905, 227.741, -179.876, 219.179, -190.414, 210.089, -200.493, 200.493, -210.089, 190.414, -219.179, 179.876, -227.741, 168.905, -235.755, 157.526, -243.2, 145.769, -250.06, 133.66, -256.317, 121.229, -261.957, 108.506, -266.965, 95.5218, -271.331, 82.3073, -275.043, 68.8946, -278.092, 55.3159, -280.471, 41.604, -282.175, 27.7918, -283.198, 13.9126, -283.54, 3.47225e-14, -283.198, -13.9126, -282.175, -27.7918, -280.471, -41.604, -278.092, -55.3159, -275.043, -68.8946, -271.331, -82.3073, -266.965, -95.5218, -261.957, -108.506, -256.317, -121.229, -250.06, -133.66, -243.2, -145.769, -235.755, -157.526, -227.741, -168.905, -219.179, -179.876, -210.089, -190.414, -200.493, -200.493, -190.414, -210.089, -179.876, -219.179, -168.905, -227.741, -157.526, -235.755, -145.769, -243.2, -133.66, -250.06, -121.229, -256.317, -108.506, -261.957, -95.5218, -266.965, -82.3073, -271.331, -68.8946, -275.043, -55.3159, -278.092, -41.604, -280.471, -27.7918, -282.175, -13.9126, -283.198, -5.20837e-14, -283.54, 13.9126, -283.198, 27.7918, -282.175, 41.604, -280.471, 55.3159, -278.092, 68.8946, -275.043, 82.3073, -271.331, 95.5218, -266.965, 108.506, -261.957, 121.229, -256.317, 133.66, -250.06, 145.769, -243.2, 157.526, -235.755, 168.905, -227.741, 179.876, -219.179, 190.414, -210.089, 200.493, -200.493, 210.089, -190.414, 219.179, -179.876, 227.741, -168.905, 235.755, -157.526, 243.2, -145.769, 250.06, -133.66, 256.317, -121.229, 261.957, -108.506, 266.965, -95.5218, 271.331, -82.3073, 275.043, -68.8946, 278.092, -55.3159, 280.471, -41.604, 282.175, -27.7918, 283.198, -13.9126)
-closed = true
-default_color = Color(0.2, 0.6, 1, 1)
-sharp_limit = 6.335
-script = ExtResource("12_ehs7h")
-diameter = 567.08
-
-[node name="Sprite2D2" type="Sprite2D" parent="MinigameBg/Sprite2D"]
-modulate = Color(1, 0.371167, 0.23, 1)
-z_index = 1
-position = Vector2(283.54, 0)
-rotation = 4.71239
-scale = Vector2(0.516129, 0.516129)
-texture = ExtResource("10_jgvtm")
-script = ExtResource("11_ehs7h")
-circle_path_node = NodePath("../Line2D")
-angular_speed_deg = 120.0
-clockwise = false
-facing_offset_deg = 90.0
-
-[node name="Node2D" type="Node2D" parent="MinigameBg/Sprite2D/Sprite2D2"]
-
-[node name="Area2D" type="Area2D" parent="MinigameBg/Sprite2D/Sprite2D2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MinigameBg/Sprite2D/Sprite2D2/Area2D"]
-shape = SubResource("CircleShape2D_mitmw")
-
 [node name="Game2" parent="MinigameBg" instance=ExtResource("6_mitmw")]
-position = Vector2(0, 164.5)
 
-[connection signal="area_entered" from="MinigameBg/Sprite2D/Sprite2D2/Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="area_exited" from="MinigameBg/Sprite2D/Sprite2D2/Area2D" to="." method="_on_area_2d_area_exited"]
+[node name="Counter" type="Label" parent="MinigameBg"]
+offset_left = -138.0
+offset_top = -570.0
+offset_right = 121.0
+offset_bottom = -390.0
+theme_override_colors/font_color = Color(0.709804, 0.258824, 0.0156863, 1)
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("4_imxhp")
+theme_override_font_sizes/font_size = 156
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xryb0")
+text = "00:10"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("5_xryb0")
+start_time = 5
+
+[node name="Mistakes" type="Label" parent="MinigameBg"]
+offset_left = -138.0
+offset_top = 433.0
+offset_right = 121.0
+offset_bottom = 613.0
+theme_override_colors/font_color = Color(0.709804, 0.258824, 0.0156863, 1)
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("4_imxhp")
+theme_override_font_sizes/font_size = 156
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xryb0")
+text = "00:10"
+script = ExtResource("6_ji4qr")

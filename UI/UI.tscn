@@ -138,10 +138,6 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Minigame" parent="CanvasLayer/CenterContainer" instance=ExtResource("6_jqf55")]
-visible = false
-layout_mode = 2
-
 [node name="slider" type="CenterContainer" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0

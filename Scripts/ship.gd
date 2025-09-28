@@ -115,9 +115,9 @@ func _set_player_volume(db: float) -> void:
 
 func _on_area_2d_area_entered(_area: Area2D) -> void:
 	Global.shop_entered = true
-	print("entered")
+	#print("entered")
 
 
 func _on_area_2d_area_exited(_area: Area2D) -> void:
 	Global.shop_entered = false
-	print("exited")
+	#print("exited")
