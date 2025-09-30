@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://7eqqoxhldk4p"]
+[gd_scene load_steps=12 format=3 uid="uid://7eqqoxhldk4p"]
 
 [ext_resource type="Texture2D" uid="uid://cdtgp2yg0ikw" path="res://Assets/Sprites/Layer 17.png" id="1_q761g"]
 [ext_resource type="Shader" uid="uid://cj8ugtyd4rpra" path="res://UI/shaders/Abberation.gdshader" id="1_qr508"]
 [ext_resource type="Shader" uid="uid://c3sp4m5xgmenr" path="res://UI/shaders/Blur.gdshader" id="2_b8tu1"]
 [ext_resource type="Shader" uid="uid://bgat0ftbagj7y" path="res://UI/shaders/Glow.gdshader" id="3_j6ura"]
+[ext_resource type="Shader" uid="uid://brk4oxglvlyjf" path="res://UI/shaders/Flash.gdshader" id="5_dolgd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q761g"]
 shader = ExtResource("3_j6ura")
@@ -33,6 +34,23 @@ shader_parameter/grain_size_px = 0.5
 shader_parameter/grain_contrast = 0.5
 shader_parameter/grain_seed = 303.867
 shader_parameter/grain_colored = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3cuqq"]
+shader = ExtResource("5_dolgd")
+shader_parameter/flash_color = Color(1, 0, 0, 1)
+shader_parameter/flash_strength = 0.0
+shader_parameter/edge_width = 0.08
+shader_parameter/edge_softness = 0.08
+shader_parameter/flash_gamma = 1.0
+shader_parameter/corner_bias = 1.0
+
+[sub_resource type="Animation" id="Animation_p3y5g"]
+resource_name = "flash red"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_g37hq"]
+_data = {
+&"flash red": SubResource("Animation_p3y5g")
+}
 
 [node name="Shaders" type="Control"]
 layout_mode = 3
@@ -82,3 +100,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_3cuqq")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_g37hq")
+}
