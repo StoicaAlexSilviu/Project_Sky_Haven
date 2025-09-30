@@ -256,6 +256,7 @@ motion_scale = Vector2(0.8, 1)
 motion_mirroring = Vector2(3072, 0)
 
 [node name="WaterLayer03" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer8"]
+light_mask = 0
 z_index = 48
 texture_repeat = 2
 position = Vector2(-3061, 1929)
@@ -275,6 +276,7 @@ motion_scale = Vector2(0.9, 1)
 motion_mirroring = Vector2(3455.73, 0)
 
 [node name="WaterLayer04" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer9"]
+light_mask = 0
 z_index = 49
 texture_repeat = 2
 position = Vector2(-1083, 1994)
@@ -294,6 +296,7 @@ motion_mirroring = Vector2(3840, 0)
 
 [node name="WaterLayer05" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer10"]
 modulate = Color(0.89, 0.89, 0.89, 1)
+light_mask = 0
 z_index = 51
 texture_repeat = 2
 position = Vector2(-2441, 2085)
@@ -313,6 +316,7 @@ motion_mirroring = Vector2(4222.28, 0)
 
 [node name="WaterLayer05" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer11"]
 modulate = Color(0.73, 0.73, 0.73, 1)
+light_mask = 0
 z_index = 51
 texture_repeat = 2
 position = Vector2(-4535, 2154)
@@ -333,6 +337,7 @@ motion_mirroring = Vector2(4604.66, 0)
 
 [node name="WaterLayer05" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer12"]
 modulate = Color(0.46, 0.46, 0.46, 1)
+light_mask = 0
 z_index = 51
 texture_repeat = 2
 position = Vector2(-3336, 2290)
@@ -353,6 +358,7 @@ motion_mirroring = Vector2(4991.77, 0)
 
 [node name="WaterLayer05" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer13"]
 modulate = Color(0.38, 0.38, 0.38, 1)
+light_mask = 0
 z_index = 51
 texture_repeat = 2
 position = Vector2(-2273, 2400)
@@ -373,6 +379,7 @@ motion_mirroring = Vector2(5376, 0)
 
 [node name="WaterLayer05" type="Sprite2D" parent="ParallaxBackground2/ParallaxLayer14"]
 modulate = Color(0.38, 0.38, 0.38, 1)
+light_mask = 0
 z_index = 51
 texture_repeat = 2
 position = Vector2(-720, 2526)

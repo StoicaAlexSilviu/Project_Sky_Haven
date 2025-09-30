@@ -26,6 +26,25 @@ func _input(event: InputEvent) -> void:
 
 func _process(_delta: float) -> void:
 	
+	if Global.slots == 5:
+		$CanvasLayer/CenterContainer4/MarginContainer/CenterContainer.visible = true
+		$CanvasLayer/CenterContainer4/MarginContainer/CenterContainer2.visible = true
+		$CanvasLayer/CenterContainer4/MarginContainer/CenterContainer3.visible = true
+		$CanvasLayer/CenterContainer4/MarginContainer/CenterContainer4.visible = true
+		$CanvasLayer/CenterContainer4/MarginContainer/CenterContainer5.visible = true
+	
+	if Global.slots == 8:
+		$CanvasLayer/CenterContainer4/MarginContainer/CenterContainer.visible = true
+		$CanvasLayer/CenterContainer4/MarginContainer/CenterContainer2.visible = true
+		$CanvasLayer/CenterContainer4/MarginContainer/CenterContainer3.visible = true
+		$CanvasLayer/CenterContainer4/MarginContainer/CenterContainer4.visible = true
+		$CanvasLayer/CenterContainer4/MarginContainer/CenterContainer5.visible = true
+		$CanvasLayer/CenterContainer4/MarginContainer/CenterContainer6.visible = true
+		$CanvasLayer/CenterContainer4/MarginContainer/CenterContainer7.visible = true
+		$CanvasLayer/CenterContainer4/MarginContainer/CenterContainer8.visible = true
+	
+	
+	
 	$CanvasLayer/Coins.text = str("Coins : ", Global.coins)
 	
 	if Global.fish_game and minigame_instance == null:

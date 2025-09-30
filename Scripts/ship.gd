@@ -37,6 +37,11 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	
+	if Global.hull_02:
+		$Ship/Hull_03.visible = true
+		$Ship/Hull_05.visible = false
+	
 	var input_dir := 0.0
 	if Input.is_action_pressed("ui_left"):  input_dir -= 1.0
 	if Input.is_action_pressed("ui_right"): input_dir += 1.0
@@ -115,9 +120,14 @@ func _set_player_volume(db: float) -> void:
 
 func _on_area_2d_area_entered(_area: Area2D) -> void:
 	Global.shop_entered = true
-	#print("entered")
-
 
 func _on_area_2d_area_exited(_area: Area2D) -> void:
 	Global.shop_entered = false
-	#print("exited")
+
+
+
+func _on_area_2d_2_area_entered(_area: Area2D) -> void:
+	Global.shipyard_entered = true
+
+func _on_area_2d_2_area_exited(_area: Area2D) -> void:
+	Global.shipyard_entered = false

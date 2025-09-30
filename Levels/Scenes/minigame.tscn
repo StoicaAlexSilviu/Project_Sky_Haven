@@ -17,7 +17,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("1_jqtna")
-mistakes = 2
+mistakes = 3
 hits = 3
 
 [node name="MinigameBg" type="Sprite2D" parent="."]
@@ -40,7 +40,7 @@ text = "00:10"
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("5_xryb0")
-start_time = 5
+start_time = 13
 
 [node name="Mistakes" type="Label" parent="MinigameBg"]
 offset_left = -138.0

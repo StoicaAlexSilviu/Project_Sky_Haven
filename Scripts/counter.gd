@@ -20,6 +20,7 @@ func _on_timer_timeout():
 		text = format_time(current_time)
 
 func format_time(seconds: int) -> String:
+	@warning_ignore("integer_division")
 	var minutes = seconds / 60
 	var secs = seconds % 60
 	return "%02d:%02d" % [minutes, secs]

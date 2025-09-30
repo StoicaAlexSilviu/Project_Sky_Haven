@@ -1,0 +1,193 @@
+[gd_scene load_steps=14 format=3 uid="uid://8etdbkavt0nb"]
+
+[ext_resource type="Texture2D" uid="uid://byylj67w01scx" path="res://Assets/Sprites/concept board 0001.png" id="1_8gq6g"]
+[ext_resource type="Script" uid="uid://cekhtgbaomd3i" path="res://Scripts/shipyard_scene.gd" id="1_vlka4"]
+[ext_resource type="FontFile" uid="uid://x6thkh2jxesg" path="res://Assets/Fonts/MouseMemoirs-Regular.ttf" id="3_0rot8"]
+[ext_resource type="Texture2D" uid="uid://cj0uibfrbkqnf" path="res://Assets/Sprites/LocalFog.png" id="3_hb30m"]
+[ext_resource type="Texture2D" uid="uid://b20fioht1cc8o" path="res://Assets/Sprites/hull 3.png" id="4_0rot8"]
+[ext_resource type="Texture2D" uid="uid://cvkp8u8wnci2h" path="res://Assets/Sprites/hull 6.png" id="5_vt1l5"]
+[ext_resource type="Texture2D" uid="uid://bd5pnptls1lvf" path="res://Assets/Sprites/hull 4.png" id="6_44q2k"]
+[ext_resource type="Script" uid="uid://7k617ay6kky" path="res://Scripts/hull.gd" id="6_ia4p1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1bj7y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vt1l5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ia4p1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_44q2k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hb30m"]
+
+[node name="Upgrade" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vlka4")
+
+[node name="ConceptBoard0001" type="Sprite2D" parent="."]
+position = Vector2(-886, -173)
+scale = Vector2(1.54437, 1.54437)
+texture = ExtResource("1_8gq6g")
+centered = false
+flip_h = true
+
+[node name="LocalFog" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.309804)
+position = Vector2(976, 1175)
+scale = Vector2(8.91774, 8.91774)
+texture = ExtResource("3_hb30m")
+
+[node name="exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 608.0
+offset_top = 621.0
+offset_right = -3043.0
+offset_bottom = -1408.0
+grow_horizontal = 2
+grow_vertical = 2
+focus_neighbor_top = NodePath("../VBoxContainer/Hull_04")
+focus_neighbor_bottom = NodePath("../VBoxContainer/Hull_02")
+theme_override_colors/font_color = Color(0.71, 0.25773, 0.0142, 1)
+theme_override_fonts/font = ExtResource("3_0rot8")
+theme_override_font_sizes/font_size = 106
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1bj7y")
+text = "Exit"
+flat = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 315.0
+offset_top = 700.0
+offset_right = 2427.0
+offset_bottom = 7394.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.13, 0.13)
+
+[node name="Hull_02" type="Button" parent="VBoxContainer" node_paths=PackedStringArray("hull")]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+focus_neighbor_top = NodePath("../../exit")
+focus_neighbor_bottom = NodePath("../Hull_03")
+theme_override_colors/font_disabled_color = Color(0.270618, 0.260137, 0.201652, 1)
+theme_override_colors/font_hover_color = Color(1, 0.676, 0.28, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(7.70092e-07, 0.640437, 0.840682, 1)
+theme_override_constants/outline_size = 243
+theme_override_fonts/font = ExtResource("3_0rot8")
+theme_override_font_sizes/font_size = 711
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vt1l5")
+disabled = true
+text = "Hull 02"
+icon = ExtResource("4_0rot8")
+flat = true
+icon_alignment = 1
+script = ExtResource("6_ia4p1")
+hull = NodePath(".")
+price = 10
+
+[node name="PriceTag" type="Label" parent="VBoxContainer/Hull_02"]
+offset_left = 5769.23
+offset_top = 1953.85
+offset_right = 9307.23
+offset_bottom = 2917.85
+theme_override_colors/font_color = Color(0.815686, 0.647059, 0, 1)
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("3_0rot8")
+theme_override_font_sizes/font_size = 841
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia4p1")
+text = "10 coins"
+vertical_alignment = 1
+
+[node name="Hull_03" type="Button" parent="VBoxContainer" node_paths=PackedStringArray("hull")]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+focus_neighbor_top = NodePath("../Hull_02")
+focus_neighbor_bottom = NodePath("../Hull_04")
+theme_override_colors/font_disabled_color = Color(0.270618, 0.260137, 0.201652, 1)
+theme_override_colors/font_hover_color = Color(1, 0.676, 0.28, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(7.70092e-07, 0.640437, 0.840682, 1)
+theme_override_constants/outline_size = 243
+theme_override_fonts/font = ExtResource("3_0rot8")
+theme_override_font_sizes/font_size = 711
+theme_override_styles/focus = SubResource("StyleBoxEmpty_44q2k")
+disabled = true
+text = "Hull 03"
+icon = ExtResource("5_vt1l5")
+flat = true
+icon_alignment = 1
+script = ExtResource("6_ia4p1")
+hull = NodePath(".")
+price = 20
+
+[node name="PriceTag2" type="Label" parent="VBoxContainer/Hull_03"]
+offset_left = 6046.15
+offset_top = 638.23
+offset_right = 9584.15
+offset_bottom = 1602.23
+theme_override_colors/font_color = Color(0.815686, 0.647059, 0, 1)
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("3_0rot8")
+theme_override_font_sizes/font_size = 841
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia4p1")
+text = "20 coins"
+vertical_alignment = 1
+
+[node name="Hull_04" type="Button" parent="VBoxContainer" node_paths=PackedStringArray("hull")]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+focus_neighbor_top = NodePath("../Hull_03")
+focus_neighbor_bottom = NodePath("../../exit")
+theme_override_colors/font_disabled_color = Color(0.270618, 0.260137, 0.201652, 1)
+theme_override_colors/font_hover_color = Color(1, 0.676, 0.28, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(7.70092e-07, 0.640437, 0.840682, 1)
+theme_override_constants/outline_size = 243
+theme_override_fonts/font = ExtResource("3_0rot8")
+theme_override_font_sizes/font_size = 711
+theme_override_styles/focus = SubResource("StyleBoxEmpty_hb30m")
+disabled = true
+text = "Hull 04
+"
+icon = ExtResource("6_44q2k")
+flat = true
+icon_alignment = 1
+script = ExtResource("6_ia4p1")
+hull = NodePath(".")
+price = 35
+
+[node name="PriceTag3" type="Label" parent="VBoxContainer/Hull_04"]
+offset_left = 6253.85
+offset_top = 556.846
+offset_right = 9791.85
+offset_bottom = 1520.85
+theme_override_colors/font_color = Color(0.815686, 0.647059, 0, 1)
+theme_override_constants/outline_size = 50
+theme_override_fonts/font = ExtResource("3_0rot8")
+theme_override_font_sizes/font_size = 841
+theme_override_styles/normal = SubResource("StyleBoxEmpty_ia4p1")
+text = "35 coins"
+vertical_alignment = 1
+
+[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/Hull_02" to="." method="_on_hull_02_pressed"]

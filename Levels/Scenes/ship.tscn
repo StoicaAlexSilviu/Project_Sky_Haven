@@ -1,13 +1,20 @@
-[gd_scene load_steps=15 format=3 uid="uid://c62s7v5e184oj"]
+[gd_scene load_steps=22 format=3 uid="uid://c62s7v5e184oj"]
 
-[ext_resource type="Texture2D" uid="uid://bhseiff8a8byj" path="res://Assets/Sprites/ship.png" id="1_58rqr"]
 [ext_resource type="Script" uid="uid://cmaw3ljvf3lwu" path="res://Scripts/ship.gd" id="1_t8iee"]
 [ext_resource type="Texture2D" uid="uid://2ftmwh7foecu" path="res://Assets/Sprites/sun.png" id="2_21nli"]
+[ext_resource type="Texture2D" uid="uid://bsnn351h0ypt8" path="res://Assets/Sprites/cabin1.png" id="3_23ktc"]
 [ext_resource type="Script" uid="uid://dt38okh2gry1t" path="res://Scripts/parallax.gd" id="3_m13lc"]
+[ext_resource type="Texture2D" uid="uid://b20fioht1cc8o" path="res://Assets/Sprites/hull 3.png" id="4_15mlh"]
+[ext_resource type="Texture2D" uid="uid://bd5pnptls1lvf" path="res://Assets/Sprites/hull 4.png" id="5_iy5h7"]
 [ext_resource type="Script" uid="uid://gf8radhhxpsj" path="res://Scripts/fishing_rod.gd" id="5_k83w8"]
 [ext_resource type="Script" uid="uid://b2shq2gjd4fvt" path="res://addons/ropesim/Rope.gd" id="5_rs7qd"]
 [ext_resource type="AudioStream" uid="uid://ccnggr0agxkr2" path="res://Assets/Sounds/motor-loop.wav" id="5_sivrg"]
+[ext_resource type="Texture2D" uid="uid://uc667xsk8f68" path="res://Assets/Sprites/hull 5.png" id="6_eey2y"]
 [ext_resource type="Script" uid="uid://brklaoabvl73l" path="res://addons/ropesim/RopeAnchor.gd" id="6_k83w8"]
+[ext_resource type="Texture2D" uid="uid://cvkp8u8wnci2h" path="res://Assets/Sprites/hull 6.png" id="7_6bfdo"]
+[ext_resource type="Texture2D" uid="uid://mxg0nq2dwl8d" path="res://Assets/Sprites/Spot_Light.png" id="8_15mlh"]
+[ext_resource type="Material" uid="uid://cg0dgc10wwcl1" path="res://Assets/Gradients/Stars_canvas_item_material.tres" id="13_eey2y"]
+[ext_resource type="Texture2D" uid="uid://cj0uibfrbkqnf" path="res://Assets/Sprites/LocalFog.png" id="13_iy5h7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_k83w8"]
 radius = 30.1353
@@ -63,34 +70,67 @@ sprite = NodePath("Ship")
 move_sound = NodePath("ColorRect/AudioStreamPlayer")
 
 [node name="Ship" type="Sprite2D" parent="."]
-texture = ExtResource("1_58rqr")
 offset = Vector2(91.65, -328)
 script = ExtResource("3_m13lc")
 amplitude_x_range = Vector2(0, 0)
 speed_x_range = Vector2(0, 0)
 
+[node name="Cabin_01" type="Sprite2D" parent="Ship"]
+position = Vector2(-8, -373)
+scale = Vector2(0.234507, 0.234507)
+texture = ExtResource("3_23ktc")
+offset = Vector2(91.65, -328)
+flip_h = true
+
+[node name="Hull_03" type="Sprite2D" parent="Ship"]
+visible = false
+position = Vector2(28, -132)
+scale = Vector2(0.246168, 0.246168)
+texture = ExtResource("4_15mlh")
+offset = Vector2(91.65, -328)
+flip_h = true
+
+[node name="Hull_04" type="Sprite2D" parent="Ship"]
+visible = false
+position = Vector2(-44, 148)
+scale = Vector2(0.209677, 0.209677)
+texture = ExtResource("5_iy5h7")
+offset = Vector2(91.65, -328)
+flip_h = true
+
+[node name="Hull_05" type="Sprite2D" parent="Ship"]
+position = Vector2(-25, 32)
+scale = Vector2(0.223175, 0.223175)
+texture = ExtResource("6_eey2y")
+offset = Vector2(91.65, -328)
+
+[node name="Hull_06" type="Sprite2D" parent="Ship"]
+visible = false
+position = Vector2(-25, 31)
+scale = Vector2(0.222462, 0.222462)
+texture = ExtResource("7_6bfdo")
+offset = Vector2(91.65, -328)
+flip_h = true
+
 [node name="Sun" type="Sprite2D" parent="Ship"]
 modulate = Color(1, 0.583333, 0.5, 0.34902)
 show_behind_parent = true
-position = Vector2(-179, -196)
-scale = Vector2(2.14432, 2.09978)
-texture = ExtResource("2_21nli")
-
-[node name="Sun2" type="Sprite2D" parent="Ship"]
-modulate = Color(1, 0.583333, 0.5, 0.34902)
-show_behind_parent = true
-position = Vector2(272, -277)
-scale = Vector2(2.14432, 2.09978)
-texture = ExtResource("2_21nli")
+position = Vector2(1103, -395)
+rotation = -1.5708
+scale = Vector2(5.805, 5.805)
+texture = ExtResource("8_15mlh")
 
 [node name="PointLight2D" type="PointLight2D" parent="Ship"]
-position = Vector2(-168, -247)
-scale = Vector2(2.14432, 2.09978)
+position = Vector2(-224, -184)
+scale = Vector2(3.0043, 2.94189)
 color = Color(1, 0.506, 0.22, 1)
 energy = 3.34
+range_layer_min = -1
+range_layer_max = 2
 texture = ExtResource("2_21nli")
 
 [node name="PointLight2D2" type="PointLight2D" parent="Ship"]
+visible = false
 position = Vector2(32, -217)
 scale = Vector2(0.542514, 0.531247)
 color = Color(1, 0.506, 0.22, 1)
@@ -119,19 +159,20 @@ energy = 3.34
 texture = ExtResource("2_21nli")
 
 [node name="PointLight2D6" type="PointLight2D" parent="Ship"]
-position = Vector2(445, -421)
-scale = Vector2(0.542514, 0.531247)
+position = Vector2(1041, -417)
+rotation = -1.5708
+scale = Vector2(5.805, 5.677)
 color = Color(1, 0.506, 0.22, 1)
 energy = 3.34
-texture = ExtResource("2_21nli")
+texture = ExtResource("8_15mlh")
 
 [node name="fishing_rod_base" type="ColorRect" parent="Ship"]
 z_index = 4
 z_as_relative = false
-offset_left = -391.0
-offset_top = -185.0
-offset_right = -383.0
-offset_bottom = 285.0
+offset_left = -395.0
+offset_top = -137.0
+offset_right = -387.0
+offset_bottom = 333.0
 rotation = -3.75246
 color = Color(1, 0, 0, 1)
 script = ExtResource("5_k83w8")
@@ -186,6 +227,14 @@ collision_mask = 2
 [node name="CollisionShape2DBait" type="CollisionShape2D" parent="Ship/fishing_rod_base/Rope/RopeAnchor/BaitHook/Area2DBait"]
 shape = SubResource("CircleShape2D_7xw5y")
 
+[node name="LocalFog" type="Sprite2D" parent="Ship"]
+self_modulate = Color(1, 1, 1, 0.247059)
+show_behind_parent = true
+material = ExtResource("13_eey2y")
+position = Vector2(-17, -144)
+scale = Vector2(10.0696, 10.0696)
+texture = ExtResource("13_iy5h7")
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_chb7m")
@@ -215,7 +264,16 @@ collision_mask = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_ttq10")
 
+[node name="Area2D2" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2"]
+shape = SubResource("CircleShape2D_ttq10")
+
 [connection signal="area_entered" from="Ship/fishing_rod_base/Rope/RopeAnchor/BaitHook/Area2D" to="Ship/fishing_rod_base" method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Ship/fishing_rod_base/Rope/RopeAnchor/BaitHook/Area2D" to="Ship/fishing_rod_base" method="_on_area_2d_area_exited"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]
+[connection signal="area_entered" from="Area2D2" to="." method="_on_area_2d_2_area_entered"]
+[connection signal="area_exited" from="Area2D2" to="." method="_on_area_2d_2_area_exited"]
