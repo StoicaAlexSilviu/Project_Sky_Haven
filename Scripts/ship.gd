@@ -40,7 +40,19 @@ func _process(delta: float) -> void:
 	
 	if Global.hull_02:
 		$Ship/Hull_03.visible = true
+		$Ship/Hull_04.visible = false
 		$Ship/Hull_05.visible = false
+		$Ship/Hull_06.visible = false
+	if Global.hull_03:
+		$Ship/Hull_03.visible = false
+		$Ship/Hull_04.visible = false
+		$Ship/Hull_05.visible = false
+		$Ship/Hull_06.visible = true
+	if Global.hull_04:
+		$Ship/Hull_03.visible = false
+		$Ship/Hull_04.visible = true
+		$Ship/Hull_05.visible = false
+		$Ship/Hull_06.visible = false
 	
 	var input_dir := 0.0
 	if Input.is_action_pressed("ui_left"):  input_dir -= 1.0

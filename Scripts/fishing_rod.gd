@@ -38,6 +38,9 @@ func _process(delta: float) -> void:
 		#GlobalCamera.camera_hook = true
 	elif dec and not inc:
 		_rope_len -= rope_change_speed * delta
+	
+	if Global.fishing_done:
+		_rope_len -= rope_change_speed * delta
 		
 	# if both or neither are pressed, do nothing
 

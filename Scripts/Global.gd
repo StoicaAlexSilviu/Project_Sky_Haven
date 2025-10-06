@@ -4,9 +4,11 @@ extends Node
 @onready var ship_moves := false
 @onready var ship_can_move := true
 @onready var fish_catch := 0
+@onready var fishing_done = false
 @onready var fish_game = false
 @onready var input_blocked = false
-@onready var coins = 0
+@onready var coins = 100
+@onready var fish_value = 1
 @onready var shop_entered = false
 @onready var shipyard_entered = false
 @onready var indicator_in = false
@@ -17,6 +19,8 @@ extends Node
 @onready var slots = 0
 @onready var hull_01 = true
 @onready var hull_02 = false
+@onready var hull_03 = false
+@onready var hull_04 = false
 #this helps me identify the fish that will need to get despawned
 @onready var fish_is_in_minigame = false
 @onready var fish_to_be_destroyed
@@ -43,8 +47,12 @@ func _process(_delta: float) -> void:
 		slots = 8
 	
 	if fish_catch == slots:
+		fishing_done = true
 		fish_game = false
-	
+		
+	if fish_catch == 0:
+		fishing_done = false
+		
 	if Input.is_action_just_pressed("ui_accept") and shop_entered:
 		get_tree().change_scene_to_file("res://Levels/Scenes/shop_scene.tscn")
 	

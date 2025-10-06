@@ -100,6 +100,7 @@ hull = NodePath(".")
 price = 10
 
 [node name="PriceTag" type="Label" parent="VBoxContainer/Hull_02"]
+layout_mode = 0
 offset_left = 5769.23
 offset_top = 1953.85
 offset_right = 9307.23
@@ -138,6 +139,7 @@ hull = NodePath(".")
 price = 20
 
 [node name="PriceTag2" type="Label" parent="VBoxContainer/Hull_03"]
+layout_mode = 0
 offset_left = 6046.15
 offset_top = 638.23
 offset_right = 9584.15
@@ -177,6 +179,7 @@ hull = NodePath(".")
 price = 35
 
 [node name="PriceTag3" type="Label" parent="VBoxContainer/Hull_04"]
+layout_mode = 0
 offset_left = 6253.85
 offset_top = 556.846
 offset_right = 9791.85
@@ -191,3 +194,5 @@ vertical_alignment = 1
 
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="VBoxContainer/Hull_02" to="." method="_on_hull_02_pressed"]
+[connection signal="pressed" from="VBoxContainer/Hull_03" to="." method="_on_hull_03_pressed"]
+[connection signal="pressed" from="VBoxContainer/Hull_04" to="." method="_on_hull_04_pressed"]
