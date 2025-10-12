@@ -167,6 +167,14 @@ color = Color(1, 0.506, 0.22, 1)
 energy = 3.34
 texture = ExtResource("8_15mlh")
 
+[node name="LocalFog" type="Sprite2D" parent="Ship"]
+self_modulate = Color(1, 1, 1, 0.247059)
+show_behind_parent = true
+material = ExtResource("13_eey2y")
+position = Vector2(-6, -170)
+scale = Vector2(10.0696, 10.0696)
+texture = ExtResource("13_iy5h7")
+
 [node name="fishing_rod_base" type="ColorRect" parent="Ship"]
 z_index = 4
 z_as_relative = false
@@ -253,14 +261,6 @@ rotation = 0.785398
 scale = Vector2(0.720728, 0.720728)
 texture = ExtResource("14_6bfdo")
 offset = Vector2(29.245, 0)
-
-[node name="LocalFog" type="Sprite2D" parent="Ship"]
-self_modulate = Color(1, 1, 1, 0.247059)
-show_behind_parent = true
-material = ExtResource("13_eey2y")
-position = Vector2(-6, -170)
-scale = Vector2(10.0696, 10.0696)
-texture = ExtResource("13_iy5h7")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

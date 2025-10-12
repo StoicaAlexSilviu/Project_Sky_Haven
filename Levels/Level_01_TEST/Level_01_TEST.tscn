@@ -12,12 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://c62s7v5e184oj" path="res://Levels/Scenes/ship.tscn" id="7_kaivw"]
 [ext_resource type="Texture2D" uid="uid://cbed8uukxhvwf" path="res://Assets/Sprites/environment.png" id="8_8a5kn"]
 [ext_resource type="Material" uid="uid://cg0dgc10wwcl1" path="res://Assets/Gradients/Stars_canvas_item_material.tres" id="9_1w0yc"]
+[ext_resource type="Texture2D" uid="uid://vrlku8fua4db" path="res://Assets/Sprites/Assets_01.png" id="9_budfb"]
 [ext_resource type="FontFile" uid="uid://x6thkh2jxesg" path="res://Assets/Fonts/MouseMemoirs-Regular.ttf" id="9_m81ce"]
 [ext_resource type="Script" uid="uid://cbrgugeyqqvmi" path="res://Scripts/Shop_label.gd" id="10_1w0yc"]
 [ext_resource type="Texture2D" uid="uid://ddr1a6ksadj8s" path="res://Assets/Sprites/base_clouds.png" id="10_y3gq7"]
 [ext_resource type="Script" uid="uid://db5qu73i0gbnu" path="res://Scripts/camera.gd" id="11_dxt10"]
 [ext_resource type="Script" uid="uid://d013ua0c11s1m" path="res://Scripts/shipyard.gd" id="12_1w0yc"]
-[ext_resource type="Script" uid="uid://beyjedg7cc40e" path="res://Scripts/area_2d_bait.gd" id="12_vqja4"]
 [ext_resource type="Script" uid="uid://dwup8voh0xlmh" path="res://Scripts/fishes.gd" id="14_5c0dn"]
 [ext_resource type="PackedScene" uid="uid://blwwmh7m47d7l" path="res://Levels/Scenes/fish.tscn" id="15_wl67n"]
 [ext_resource type="PackedScene" uid="uid://7udwfygsg60o" path="res://Levels/Scenes/fish_type2.tscn" id="16_8a5kn"]
@@ -80,9 +80,333 @@ layer = -2
 motion_scale = Vector2(0.5, 1)
 
 [node name="Environment" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer"]
+self_modulate = Color(1, 1, 1, 0)
 position = Vector2(-1572, -130)
 texture = ExtResource("8_8a5kn")
 centered = false
+
+[node name="ground" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment"]
+position = Vector2(828, 1591)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(90.415, 20.325, 1098.27, 95.525)
+region_filter_clip_enabled = true
+
+[node name="ground2" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/ground"]
+position = Vector2(1062.92, 3.79614)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(90.415, 20.325, 1098.27, 95.525)
+region_filter_clip_enabled = true
+
+[node name="ground3" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/ground"]
+position = Vector2(2123.94, 9.49023)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(90.415, 20.325, 1098.27, 95.525)
+region_filter_clip_enabled = true
+
+[node name="ground4" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/ground"]
+position = Vector2(3194.91, 3.79614)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(90.415, 20.325, 1098.27, 95.525)
+region_filter_clip_enabled = true
+
+[node name="ground5" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/ground"]
+position = Vector2(4255.92, 9.49023)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(90.415, 20.325, 1098.27, 95.525)
+region_filter_clip_enabled = true
+
+[node name="ground6" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/ground"]
+position = Vector2(5311.25, 3.79614)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(90.415, 20.325, 1098.27, 95.525)
+region_filter_clip_enabled = true
+
+[node name="ground7" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/ground"]
+position = Vector2(6372.27, 9.49023)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(90.415, 20.325, 1098.27, 95.525)
+region_filter_clip_enabled = true
+
+[node name="ground8" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/ground"]
+position = Vector2(7443.24, 3.79614)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(90.415, 20.325, 1098.27, 95.525)
+region_filter_clip_enabled = true
+
+[node name="ground9" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/ground"]
+position = Vector2(8504.26, 9.49023)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(90.415, 20.325, 1098.27, 95.525)
+region_filter_clip_enabled = true
+
+[node name="Poles" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment"]
+
+[node name="pole_01" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(618, 2039)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(88, 173, 149, 1987)
+
+[node name="pole_16" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(185, 2066)
+rotation = -0.08552
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(88, 173, 149, 1987)
+
+[node name="pole_09" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(3284, 2035)
+rotation = 0.0328836
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(88, 173, 149, 1987)
+
+[node name="pole_02" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(1509, 2042)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(285, 172, 187, 1988)
+
+[node name="pole_07" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(3225, 2042)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(285, 172, 187, 1988)
+
+[node name="pole_08" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(5257, 2042)
+rotation = 0.0479761
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(285, 172, 187, 1988)
+
+[node name="pole_03" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(977, 2009)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(507, 172, 227, 1988)
+
+[node name="pole_04" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(1105, 2037)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(788, 174, 182, 1986)
+
+[node name="pole_15" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(304, 2193)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(788, 174, 182, 1986)
+
+[node name="pole_10" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(4299, 2045)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(788, 174, 182, 1986)
+
+[node name="pole_05" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(2139, 2037)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1013, 205, 206, 1955)
+
+[node name="pole_11" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(4376, 2029)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1013, 205, 206, 1955)
+
+[node name="pole_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(381, 2135)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1013, 205, 206, 1955)
+
+[node name="pole_06" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(2692, 1987)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1262, 172, 359, 1988)
+
+[node name="pole_13" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(2692, 1987)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1262, 172, 359, 1988)
+
+[node name="pole_12" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
+position = Vector2(5574, 2146)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1262, 172, 359, 1988)
+
+[node name="Props" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment"]
+
+[node name="Prop_01" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props"]
+position = Vector2(1607, 1643)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2105, 320, 196, 332)
+region_filter_clip_enabled = true
+
+[node name="Prop_06" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props/Prop_01"]
+position = Vector2(5212, 0)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2105, 320, 196, 332)
+region_filter_clip_enabled = true
+
+[node name="Prop_07" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props/Prop_01"]
+position = Vector2(7166, 14)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2105, 320, 196, 332)
+region_filter_clip_enabled = true
+
+[node name="Prop_02" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props"]
+position = Vector2(812, 1666)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2362, 316, 490, 442)
+region_filter_clip_enabled = true
+
+[node name="Prop_06" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props/Prop_02"]
+position = Vector2(6456, 0)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2362, 316, 490, 442)
+region_filter_clip_enabled = true
+
+[node name="Prop_07" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props/Prop_02"]
+position = Vector2(7416, 0)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(2362, 316, 490, 442)
+region_filter_clip_enabled = true
+
+[node name="Prop_03" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props"]
+position = Vector2(1163, 1720)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2926, 332, 142, 619)
+region_filter_clip_enabled = true
+
+[node name="Prop_06" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props/Prop_03"]
+position = Vector2(5980, 0)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2926, 332, 142, 619)
+region_filter_clip_enabled = true
+
+[node name="Prop_07" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props/Prop_03"]
+position = Vector2(8860, 408)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2926, 332, 142, 619)
+region_filter_clip_enabled = true
+
+[node name="Prop_04" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props"]
+position = Vector2(686, 1639)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(3141, 332, 136, 313)
+region_filter_clip_enabled = true
+
+[node name="Prop_06" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props/Prop_04"]
+position = Vector2(3928, 144)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(3141, 332, 136, 313)
+region_filter_clip_enabled = true
+
+[node name="Prop_07" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props/Prop_04"]
+position = Vector2(4080, 102)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(3141, 332, 136, 313)
+region_filter_clip_enabled = true
+
+[node name="Prop_08" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props/Prop_04"]
+position = Vector2(3998, 234)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(3141, 332, 136, 313)
+region_filter_clip_enabled = true
+
+[node name="Prop_09" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props/Prop_04"]
+position = Vector2(5324, 14)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(3141, 332, 136, 313)
+region_filter_clip_enabled = true
+
+[node name="Prop_10" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props/Prop_04"]
+position = Vector2(7928, 8)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(3141, 332, 136, 313)
+region_filter_clip_enabled = true
+
+[node name="Prop_05" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props"]
+position = Vector2(2247, 1646)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(3373, 347, 211, 313)
+region_filter_clip_enabled = true
+
+[node name="Prop_06" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props/Prop_05"]
+position = Vector2(-1588, 0)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(3373, 347, 211, 313)
+region_filter_clip_enabled = true
+
+[node name="Prop_07" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props/Prop_05"]
+position = Vector2(5614, 14)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(3373, 347, 211, 313)
+region_filter_clip_enabled = true
+
+[node name="Prop_08" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Props/Prop_05"]
+position = Vector2(-3908, 386)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(3373, 347, 211, 313)
+region_filter_clip_enabled = true
 
 [node name="Label" type="Label" parent="ParallaxBackground3/ParallaxLayer"]
 material = ExtResource("9_1w0yc")
@@ -133,11 +457,6 @@ shape = SubResource("RectangleShape2D_w3pgd")
 
 [node name="Ship" parent="." instance=ExtResource("7_kaivw")]
 position = Vector2(359, 1933)
-
-[node name="Area2DBait" parent="Ship/Ship/fishing_rod_base/Rope/RopeAnchor/BaitHook" index="2"]
-collision_layer = 1
-collision_mask = 1
-script = ExtResource("12_vqja4")
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("target", "bait", "sprite_for_facing")]
 position = Vector2(1920, 1900)
