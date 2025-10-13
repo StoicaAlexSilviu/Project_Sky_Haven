@@ -81,9 +81,963 @@ motion_scale = Vector2(0.5, 1)
 
 [node name="Environment" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer"]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(-1572, -130)
+position = Vector2(-1572, -6)
 texture = ExtResource("8_8a5kn")
 centered = false
+
+[node name="Planks_back" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment"]
+modulate = Color(0.288518, 0.288518, 0.288518, 1)
+z_index = -1
+
+[node name="module_01" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back"]
+position = Vector2(1038, 1804)
+
+[node name="Plank_15" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(-233.268, -175.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_28" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(-82.2676, -17.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_29" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(117.732, -168.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_30" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(178.733, -36.1511)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_31" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(-109.268, -23.1516)
+rotation = 0.192105
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_32" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(3.73242, -20.1514)
+rotation = -0.0707532
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_19" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(293.732, 35.849)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_16" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(13.7322, -104.151)
+rotation = -1.56165
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_21" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(0.732544, 98.849)
+rotation = 1.57572
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_20" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(-98.2675, -148.151)
+rotation = -0.835339
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_22" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(114.732, -14.1512)
+rotation = 0.0429382
+scale = Vector2(0.682849, 0.639847)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_23" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(-355.268, 1.84875)
+rotation = 0.0429382
+scale = Vector2(0.682849, 0.639847)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(-137.268, -43.1515)
+rotation = 1.5583
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_24" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(15.7323, 148.849)
+rotation = -1.59169
+scale = Vector2(0.673804, 0.673804)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_17" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(212.733, -172.151)
+rotation = -1.56553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_25" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(-107.267, 30.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_26" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(230.733, 204.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_27" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(-199.267, 201.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_18" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_01"]
+position = Vector2(339.733, -31.1509)
+rotation = -0.025876
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
+
+[node name="module_02" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back"]
+position = Vector2(1813, 1818)
+rotation = -3.14041
+
+[node name="Plank_15" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(-233.268, -175.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_28" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(-82.2676, -17.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_29" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(117.732, -168.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_30" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(178.733, -36.1511)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_31" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(-109.268, -23.1516)
+rotation = 0.192105
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_32" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(3.73242, -20.1514)
+rotation = -0.0707532
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_19" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(293.732, 35.849)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_16" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(13.7322, -104.151)
+rotation = -1.56165
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_21" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(0.732544, 98.849)
+rotation = 1.57572
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_20" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(-98.2675, -148.151)
+rotation = -0.835339
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_22" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(114.732, -14.1512)
+rotation = 0.0429382
+scale = Vector2(0.682849, 0.639847)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_23" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(-355.268, 1.84875)
+rotation = 0.0429382
+scale = Vector2(0.682849, 0.639847)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(-137.268, -43.1515)
+rotation = 1.5583
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_24" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(15.7323, 148.849)
+rotation = -1.59169
+scale = Vector2(0.673804, 0.673804)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_17" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(212.733, -172.151)
+rotation = -1.56553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_25" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(-107.267, 30.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_26" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(230.733, 204.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_27" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(-199.267, 201.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_18" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_02"]
+position = Vector2(339.733, -31.1509)
+rotation = -0.025876
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
+
+[node name="module_03" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back"]
+position = Vector2(2474, 1804)
+
+[node name="Plank_15" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(-233.268, -175.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_28" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(-82.2676, -17.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_29" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(117.732, -168.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_30" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(178.733, -36.1511)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_31" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(-109.268, -23.1516)
+rotation = 0.192105
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_32" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(3.73242, -20.1514)
+rotation = -0.0707532
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_19" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(293.732, 35.849)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_16" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(13.7322, -104.151)
+rotation = -1.56165
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_21" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(0.732544, 98.849)
+rotation = 1.57572
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_20" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(-98.2675, -148.151)
+rotation = -0.835339
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_22" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(114.732, -14.1512)
+rotation = 0.0429382
+scale = Vector2(0.682849, 0.639847)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_23" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(-355.268, 1.84875)
+rotation = 0.0429382
+scale = Vector2(0.682849, 0.639847)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(-137.268, -43.1515)
+rotation = 1.5583
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_24" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(15.7323, 148.849)
+rotation = -1.59169
+scale = Vector2(0.673804, 0.673804)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_17" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(212.733, -172.151)
+rotation = -1.56553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_25" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(-107.267, 30.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_26" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(230.733, 204.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_27" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(-199.267, 201.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_18" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_03"]
+position = Vector2(339.733, -31.1509)
+rotation = -0.025876
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
+
+[node name="module_04" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back"]
+position = Vector2(3302, 1804)
+
+[node name="Plank_15" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(-233.268, -175.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_28" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(-82.2676, -17.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_29" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(117.732, -168.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_30" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(178.733, -36.1511)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_31" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(-109.268, -23.1516)
+rotation = 0.192105
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_32" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(3.73242, -20.1514)
+rotation = -0.0707532
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_19" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(293.732, 35.849)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_16" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(13.7322, -104.151)
+rotation = -1.56165
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_21" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(0.732544, 98.849)
+rotation = 1.57572
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_20" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(-98.2675, -148.151)
+rotation = -0.835339
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_22" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(114.732, -14.1512)
+rotation = 0.0429382
+scale = Vector2(0.682849, 0.639847)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_23" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(-355.268, 1.84875)
+rotation = 0.0429382
+scale = Vector2(0.682849, 0.639847)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(-137.268, -43.1515)
+rotation = 1.5583
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_24" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(15.7323, 148.849)
+rotation = -1.59169
+scale = Vector2(0.673804, 0.673804)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_17" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(212.733, -172.151)
+rotation = -1.56553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_25" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(-107.267, 30.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_26" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(230.733, 204.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_27" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(-199.267, 201.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_18" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_04"]
+position = Vector2(339.733, -31.1509)
+rotation = -0.025876
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
+
+[node name="module_05" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back"]
+position = Vector2(4129, 1823)
+rotation = -3.12193
+
+[node name="Plank_15" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(-233.268, -175.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_28" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(-82.2676, -17.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_29" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(117.732, -168.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_30" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(178.733, -36.1511)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_31" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(-109.268, -23.1516)
+rotation = 0.192105
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_32" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(3.73242, -20.1514)
+rotation = -0.0707532
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_19" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(293.732, 35.849)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_16" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(13.7322, -104.151)
+rotation = -1.56165
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_21" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(0.732544, 98.849)
+rotation = 1.57572
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_20" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(-98.2675, -148.151)
+rotation = -0.835339
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_22" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(114.732, -14.1512)
+rotation = 0.0429382
+scale = Vector2(0.682849, 0.639847)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_23" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(-355.268, 1.84875)
+rotation = 0.0429382
+scale = Vector2(0.682849, 0.639847)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(-137.268, -43.1515)
+rotation = 1.5583
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_24" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(15.7323, 148.849)
+rotation = -1.59169
+scale = Vector2(0.673804, 0.673804)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_17" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(212.733, -172.151)
+rotation = -1.56553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_25" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(-107.267, 30.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_26" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(230.733, 204.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_27" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(-199.267, 201.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_18" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_05"]
+position = Vector2(339.733, -31.1509)
+rotation = -0.025876
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
+
+[node name="module_06" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back"]
+position = Vector2(4915, 1804)
+
+[node name="Plank_15" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(-233.268, -175.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_28" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(-82.2676, -17.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_29" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(117.732, -168.151)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_30" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(178.733, -36.1511)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_31" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(-109.268, -23.1516)
+rotation = 0.192105
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_32" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(3.73242, -20.1514)
+rotation = -0.0707532
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_19" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(293.732, 35.849)
+rotation = 1.5632
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_16" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(13.7322, -104.151)
+rotation = -1.56165
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_21" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(0.732544, 98.849)
+rotation = 1.57572
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_20" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(-98.2675, -148.151)
+rotation = -0.835339
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_22" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(114.732, -14.1512)
+rotation = 0.0429382
+scale = Vector2(0.682849, 0.639847)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_23" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(-355.268, 1.84875)
+rotation = 0.0429382
+scale = Vector2(0.682849, 0.639847)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(-137.268, -43.1515)
+rotation = 1.5583
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_24" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(15.7323, 148.849)
+rotation = -1.59169
+scale = Vector2(0.673804, 0.673804)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_17" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(212.733, -172.151)
+rotation = -1.56553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_25" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(-107.267, 30.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_26" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(230.733, 204.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_27" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(-199.267, 201.849)
+rotation = 1.57553
+scale = Vector2(0.731845, 0.731845)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_18" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks_back/module_06"]
+position = Vector2(339.733, -31.1509)
+rotation = -0.025876
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
 
 [node name="ground" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment"]
 position = Vector2(828, 1591)
@@ -246,13 +1200,6 @@ texture = ExtResource("9_budfb")
 region_enabled = true
 region_rect = Rect2(1013, 205, 206, 1955)
 
-[node name="pole_06" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
-position = Vector2(2692, 1987)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("9_budfb")
-region_enabled = true
-region_rect = Rect2(1262, 172, 359, 1988)
-
 [node name="pole_13" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
 position = Vector2(2692, 1987)
 scale = Vector2(0.5, 0.5)
@@ -261,11 +1208,638 @@ region_enabled = true
 region_rect = Rect2(1262, 172, 359, 1988)
 
 [node name="pole_12" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Poles"]
-position = Vector2(5574, 2146)
+position = Vector2(5518, 2127)
+rotation = 0.125624
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(1262, 172, 359, 1988)
+
+[node name="Shadows" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment"]
+position = Vector2(740, 1672)
+
+[node name="Shadow_01" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows"]
+position = Vector2(-120, 9)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_budfb")
 region_enabled = true
-region_rect = Rect2(1262, 172, 359, 1988)
+region_rect = Rect2(2124, 87, 87, 99)
+region_filter_clip_enabled = true
+
+[node name="Shadow_06" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows/Shadow_01"]
+position = Vector2(764, 242)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2124, 87, 87, 99)
+region_filter_clip_enabled = true
+
+[node name="Shadow_15" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows/Shadow_01"]
+position = Vector2(758, -138)
+scale = Vector2(1.16736, 0.829103)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2124, 87, 87, 99)
+region_filter_clip_enabled = true
+
+[node name="Shadow_07" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows/Shadow_01"]
+position = Vector2(952, 98)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2124, 87, 87, 99)
+region_filter_clip_enabled = true
+
+[node name="Shadow_08" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows/Shadow_01"]
+position = Vector2(766, 316)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2124, 87, 87, 99)
+region_filter_clip_enabled = true
+
+[node name="Shadow_09" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows/Shadow_01"]
+position = Vector2(4050, 196)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2124, 87, 87, 99)
+region_filter_clip_enabled = true
+
+[node name="Shadow_10" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows/Shadow_01"]
+position = Vector2(4134, 290)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2124, 87, 87, 99)
+region_filter_clip_enabled = true
+
+[node name="Shadow_11" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows/Shadow_01"]
+position = Vector2(4222, 142)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2124, 87, 87, 99)
+region_filter_clip_enabled = true
+
+[node name="Shadow_12" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows/Shadow_01"]
+position = Vector2(5342, -14)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2124, 87, 87, 99)
+region_filter_clip_enabled = true
+
+[node name="Shadow_13" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows/Shadow_01"]
+position = Vector2(5334, 190)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2124, 87, 87, 99)
+region_filter_clip_enabled = true
+
+[node name="Shadow_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows/Shadow_01"]
+position = Vector2(7336, 162)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2124, 87, 87, 99)
+region_filter_clip_enabled = true
+
+[node name="Shadow_02" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows"]
+position = Vector2(773, 171)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2285, 54, 160, 128)
+region_filter_clip_enabled = true
+
+[node name="Shadow_06" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows/Shadow_02"]
+position = Vector2(1260, -84)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2285, 54, 160, 128)
+region_filter_clip_enabled = true
+
+[node name="Shadow_07" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows/Shadow_02"]
+position = Vector2(3430, -350)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2285, 54, 160, 128)
+region_filter_clip_enabled = true
+
+[node name="Shadow_08" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows/Shadow_02"]
+position = Vector2(3420, -56)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2285, 54, 160, 128)
+region_filter_clip_enabled = true
+
+[node name="Shadow_03" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows"]
+position = Vector2(1926, 136)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2509, 65, 160, 111)
+region_filter_clip_enabled = true
+
+[node name="Shadow_06" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows/Shadow_03"]
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2509, 65, 160, 111)
+region_filter_clip_enabled = true
+
+[node name="Shadow_05" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Shadows"]
+position = Vector2(1955, 99)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(3062, 61, 242, 128)
+region_filter_clip_enabled = true
+
+[node name="Planks" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment"]
+position = Vector2(618, 2039)
+scale = Vector2(0.5, 0.5)
+region_enabled = true
+region_rect = Rect2(88, 173, 149, 1987)
+
+[node name="Plank_01" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks"]
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_09" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_01"]
+position = Vector2(1194, -782)
+rotation = 1.2834
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_10" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_01"]
+position = Vector2(3758, -778)
+rotation = 1.93038
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_11" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_01"]
+position = Vector2(7106, -754)
+rotation = -1.13141
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_12" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_01"]
+z_index = -1
+position = Vector2(9578, -248)
+rotation = -1.7778
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_13" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_01"]
+z_index = -1
+position = Vector2(358, -694)
+rotation = -1.7778
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_01"]
+z_index = -1
+position = Vector2(358, -176)
+rotation = -1.46863
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1656, 1425, 166, 711)
+
+[node name="Plank_02" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks"]
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_09" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_02"]
+position = Vector2(2458, -352)
+rotation = -1.40021
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_10" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_02"]
+position = Vector2(6118, -676)
+rotation = -1.65024
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_11" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_02"]
+z_index = -1
+position = Vector2(8526, -752)
+rotation = -1.56077
+scale = Vector2(1.22925, 1.22925)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_12" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_02"]
+position = Vector2(5504, -44.0001)
+rotation = 0.454851
+scale = Vector2(1.22925, 1.22925)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_13" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_02"]
+position = Vector2(170, 150)
+rotation = -0.00954369
+scale = Vector2(1.22925, 1.22925)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_02"]
+position = Vector2(476, 77.9999)
+rotation = -3.13183
+scale = Vector2(1.22925, 1.22925)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1879, 458, 193, 1682)
+
+[node name="Plank_03" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks"]
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_09" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_03"]
+position = Vector2(862, -404)
+rotation = -1.39525
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_10" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_03"]
+position = Vector2(804, -904)
+rotation = -1.75843
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_11" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_03"]
+position = Vector2(850, -314)
+rotation = 1.57631
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_12" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_03"]
+position = Vector2(3874, -852)
+rotation = 0.494825
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_13" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_03"]
+position = Vector2(5280, -774)
+rotation = 1.52317
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_03"]
+position = Vector2(5596, -522)
+rotation = 2.50632
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_15" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_03"]
+position = Vector2(6068, -810)
+rotation = 3.19229
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_16" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_03"]
+position = Vector2(6158, -826)
+rotation = 6.27854
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_17" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_03"]
+z_index = -1
+position = Vector2(7448, -398)
+rotation = 4.82537
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_18" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_03"]
+z_index = -1
+position = Vector2(7428, -492)
+rotation = 4.62733
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_19" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_03"]
+z_index = -1
+position = Vector2(9418, -314)
+rotation = 5.41283
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1794, 1096, 78, 272)
+
+[node name="Plank_04" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks"]
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_09" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_04"]
+position = Vector2(1274, -214)
+rotation = -1.62819
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_10" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_04"]
+position = Vector2(2592, -472)
+rotation = 1.47293
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_11" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_04"]
+z_index = -1
+position = Vector2(3580, -560)
+rotation = 1.64646
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_12" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_04"]
+z_index = -1
+position = Vector2(4712, -812)
+rotation = 4.67835
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_13" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_04"]
+z_index = -1
+position = Vector2(8190, -568)
+rotation = 4.43507
+scale = Vector2(1.39599, 1.39599)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1661, 304, 103, 1068)
+
+[node name="Plank_05" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks"]
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_09" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_05"]
+position = Vector2(1068, -464)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_10" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_05"]
+position = Vector2(2654, -636)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_11" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_05"]
+position = Vector2(2886, -592)
+rotation = 3.06896
+scale = Vector2(1.24996, 1.24996)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_12" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_05"]
+position = Vector2(4978, -678)
+rotation = 2.25822
+scale = Vector2(1.24996, 1.24996)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_13" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_05"]
+position = Vector2(8900, -482)
+rotation = -1.16181
+scale = Vector2(1.56047, 1.56047)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1792, 460, 80, 589)
+
+[node name="Plank_06" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks"]
+region_enabled = true
+region_rect = Rect2(1821, 269, 218, 162)
+
+[node name="Plank_09" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_06"]
+position = Vector2(858, -574)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1821, 269, 218, 162)
+
+[node name="Plank_10" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_06"]
+position = Vector2(2762, -752)
+scale = Vector2(1.14823, 1.14823)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1821, 269, 218, 162)
+
+[node name="Plank_11" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_06"]
+position = Vector2(2772, -574)
+scale = Vector2(1.14823, 1.14823)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1821, 269, 218, 162)
+
+[node name="Plank_12" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_06"]
+position = Vector2(5434, -230)
+scale = Vector2(1.14823, 1.14823)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1821, 269, 218, 162)
+
+[node name="Plank_13" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_06"]
+position = Vector2(6298, -826)
+rotation = 1.55369
+scale = Vector2(1.14823, 1.14823)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1821, 269, 218, 162)
+
+[node name="Plank_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_06"]
+position = Vector2(6974, -738)
+rotation = 1.55369
+scale = Vector2(1.14823, 1.14823)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1821, 269, 218, 162)
+
+[node name="Plank_15" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_06"]
+position = Vector2(7450, -258)
+rotation = 3.11378
+scale = Vector2(1.14823, 1.14823)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1821, 269, 218, 162)
+
+[node name="Plank_16" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_06"]
+position = Vector2(8074, -628)
+rotation = 4.61653
+scale = Vector2(1.14823, 1.14823)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1821, 269, 218, 162)
+
+[node name="Plank_17" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_06"]
+position = Vector2(9672, -172)
+rotation = 4.61653
+scale = Vector2(1.14823, 1.14823)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1821, 269, 218, 162)
+
+[node name="Plank_18" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_06"]
+position = Vector2(9164, -530)
+rotation = 5.07551
+scale = Vector2(1.22278, 1.22278)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1821, 269, 218, 162)
+
+[node name="Plank_19" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_06"]
+position = Vector2(8988, -592)
+rotation = 5.07551
+scale = Vector2(1.22278, 1.22278)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1821, 269, 218, 162)
+
+[node name="Plank_20" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_06"]
+position = Vector2(8358, -826)
+rotation = 6.87737
+scale = Vector2(1.22278, 1.22278)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1821, 269, 218, 162)
+
+[node name="Plank_21" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_06"]
+z_index = -1
+position = Vector2(-544, -488)
+rotation = 6.27057
+scale = Vector2(1.22278, 1.22278)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1821, 269, 218, 162)
+
+[node name="Plank_07" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks"]
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
+
+[node name="Plank_09" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_07"]
+position = Vector2(140, -822)
+rotation = -0.396099
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
+
+[node name="Plank_10" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_07"]
+position = Vector2(1618, -294)
+rotation = -0.396099
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
+
+[node name="Plank_11" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_07"]
+position = Vector2(3204, -440)
+rotation = -1.5212
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
+
+[node name="Plank_12" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_07"]
+position = Vector2(3330, -746)
+rotation = 1.5131
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
+
+[node name="Plank_13" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_07"]
+position = Vector2(6442, -766)
+rotation = 1.5131
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
+
+[node name="Plank_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_07"]
+position = Vector2(7702, -588)
+rotation = 1.5131
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
+
+[node name="Plank_15" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_07"]
+z_index = -1
+position = Vector2(9780, -576)
+rotation = 0.0108207
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
+
+[node name="Plank_16" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_07"]
+z_index = -1
+position = Vector2(-750, -192)
+rotation = -0.193762
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1680, 147, 361, 116)
+
+[node name="Plank_08" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks"]
+region_enabled = true
+region_rect = Rect2(1675, 56, 369, 64)
+
+[node name="Plank_09" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_08"]
+position = Vector2(1954, -802)
+rotation = -0.716858
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1675, 56, 369, 64)
+
+[node name="Plank_10" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_08"]
+position = Vector2(2534, -816)
+rotation = 0.67978
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1675, 56, 369, 64)
+
+[node name="Plank_11" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_08"]
+position = Vector2(3462, -732)
+rotation = 1.64978
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1675, 56, 369, 64)
+
+[node name="Plank_12" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_08"]
+position = Vector2(4996, -736)
+rotation = 1.64978
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1675, 56, 369, 64)
+
+[node name="Plank_13" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_08"]
+position = Vector2(6588, -768)
+rotation = 1.64978
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1675, 56, 369, 64)
+
+[node name="Plank_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_08"]
+position = Vector2(7806, -620)
+rotation = 1.64978
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1675, 56, 369, 64)
+
+[node name="Plank_15" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Planks/Plank_08"]
+position = Vector2(9416, -514)
+rotation = 1.64978
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(1675, 56, 369, 64)
 
 [node name="Props" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment"]
 
@@ -454,6 +2028,7 @@ position = Vector2(207, 277.5)
 shape = SubResource("RectangleShape2D_w3pgd")
 
 [node name="Water" parent="." instance=ExtResource("6_dxt10")]
+position = Vector2(-19, 75)
 
 [node name="Ship" parent="." instance=ExtResource("7_kaivw")]
 position = Vector2(359, 1933)
@@ -467,7 +2042,7 @@ editor_draw_drag_margin = true
 script = ExtResource("11_dxt10")
 target = NodePath("../Ship")
 bait = NodePath("../Ship/Ship/fishing_rod_base/Rope/RopeAnchor/BaitHook")
-lead_pixels = 250.0
+lead_pixels = 600.0
 sprite_for_facing = NodePath("../Ship")
 lead_smooth = 0.5
 idle_lead_delay = 0.5

@@ -126,7 +126,7 @@ position = Vector2(-224, -184)
 scale = Vector2(3.0043, 2.94189)
 color = Color(1, 0.506, 0.22, 1)
 energy = 3.34
-range_layer_min = -1
+range_layer_min = -2
 range_layer_max = 2
 texture = ExtResource("2_21nli")
 
@@ -165,10 +165,11 @@ rotation = -1.5708
 scale = Vector2(5.805, 5.677)
 color = Color(1, 0.506, 0.22, 1)
 energy = 3.34
+range_layer_min = -2
 texture = ExtResource("8_15mlh")
 
 [node name="LocalFog" type="Sprite2D" parent="Ship"]
-self_modulate = Color(1, 1, 1, 0.247059)
+self_modulate = Color(1, 1, 1, 0.439216)
 show_behind_parent = true
 material = ExtResource("13_eey2y")
 position = Vector2(-6, -170)
