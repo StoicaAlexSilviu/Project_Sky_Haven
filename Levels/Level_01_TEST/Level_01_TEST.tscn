@@ -1039,6 +1039,50 @@ texture = ExtResource("9_budfb")
 region_enabled = true
 region_rect = Rect2(1680, 147, 361, 116)
 
+[node name="Prop_10" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment"]
+position = Vector2(706, 1507)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2133, 781, 232, 281)
+region_filter_clip_enabled = true
+
+[node name="Prop_13" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Prop_10"]
+position = Vector2(3880, -252)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2133, 781, 232, 281)
+region_filter_clip_enabled = true
+
+[node name="Prop_11" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Prop_10"]
+position = Vector2(3760, 0)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2133, 781, 232, 281)
+region_filter_clip_enabled = true
+
+[node name="Prop_12" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Prop_10"]
+position = Vector2(4004, 0)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2133, 781, 232, 281)
+region_filter_clip_enabled = true
+
+[node name="Prop_14" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Prop_10"]
+position = Vector2(7120, 0)
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2133, 781, 232, 281)
+region_filter_clip_enabled = true
+
+[node name="Prop_15" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment/Prop_10"]
+position = Vector2(8856, 734)
+rotation = -0.887564
+texture = ExtResource("9_budfb")
+region_enabled = true
+region_rect = Rect2(2133, 781, 232, 281)
+region_filter_clip_enabled = true
+
 [node name="ground" type="Sprite2D" parent="ParallaxBackground3/ParallaxLayer/Environment"]
 position = Vector2(828, 1591)
 scale = Vector2(0.5, 0.5)
